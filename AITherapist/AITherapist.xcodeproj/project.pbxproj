@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */; };
+		66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE92C5E20A20022E10C /* ContentView.swift */; };
+		66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE1FEB2C5E20A30022E10C /* Assets.xcassets */; };
+		66EE1FF02C5E20A30022E10C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE1FEF2C5E20A30022E10C /* Preview Assets.xcassets */; };
+		66EE1FFA2C5E20A30022E10C /* AITherapistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FF92C5E20A30022E10C /* AITherapistTests.swift */; };
+		66EE20042C5E20A30022E10C /* AITherapistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE20032C5E20A30022E10C /* AITherapistUITests.swift */; };
+		66EE20062C5E20A30022E10C /* AITherapistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE20052C5E20A30022E10C /* AITherapistUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66EE1FF62C5E20A30022E10C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66EE1FDC2C5E20A20022E10C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66EE1FE32C5E20A20022E10C;
+			remoteInfo = AITherapist;
+		};
+		66EE20002C5E20A30022E10C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66EE1FDC2C5E20A20022E10C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66EE1FE32C5E20A20022E10C;
+			remoteInfo = AITherapist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66EE1FE42C5E20A20022E10C /* AITherapist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITherapist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistApp.swift; sourceTree = "<group>"; };
+		66EE1FE92C5E20A20022E10C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66EE1FEB2C5E20A30022E10C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66EE1FED2C5E20A30022E10C /* AITherapist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AITherapist.entitlements; sourceTree = "<group>"; };
+		66EE1FEF2C5E20A30022E10C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		66EE1FF52C5E20A30022E10C /* AITherapistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AITherapistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EE1FF92C5E20A30022E10C /* AITherapistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistTests.swift; sourceTree = "<group>"; };
+		66EE1FFF2C5E20A30022E10C /* AITherapistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AITherapistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EE20032C5E20A30022E10C /* AITherapistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistUITests.swift; sourceTree = "<group>"; };
+		66EE20052C5E20A30022E10C /* AITherapistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66EE1FE12C5E20A20022E10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EE1FF22C5E20A30022E10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EE1FFC2C5E20A30022E10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66EE1FDB2C5E20A20022E10C = {
+			isa = PBXGroup;
+			children = (
+				66EE1FE62C5E20A20022E10C /* AITherapist */,
+				66EE1FF82C5E20A30022E10C /* AITherapistTests */,
+				66EE20022C5E20A30022E10C /* AITherapistUITests */,
+				66EE1FE52C5E20A20022E10C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66EE1FE52C5E20A20022E10C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66EE1FE42C5E20A20022E10C /* AITherapist.app */,
+				66EE1FF52C5E20A30022E10C /* AITherapistTests.xctest */,
+				66EE1FFF2C5E20A30022E10C /* AITherapistUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66EE1FE62C5E20A20022E10C /* AITherapist */ = {
+			isa = PBXGroup;
+			children = (
+				66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */,
+				66EE1FE92C5E20A20022E10C /* ContentView.swift */,
+				66EE1FEB2C5E20A30022E10C /* Assets.xcassets */,
+				66EE1FED2C5E20A30022E10C /* AITherapist.entitlements */,
+				66EE1FEE2C5E20A30022E10C /* Preview Content */,
+			);
+			path = AITherapist;
+			sourceTree = "<group>";
+		};
+		66EE1FEE2C5E20A30022E10C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				66EE1FEF2C5E20A30022E10C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		66EE1FF82C5E20A30022E10C /* AITherapistTests */ = {
+			isa = PBXGroup;
+			children = (
+				66EE1FF92C5E20A30022E10C /* AITherapistTests.swift */,
+			);
+			path = AITherapistTests;
+			sourceTree = "<group>";
+		};
+		66EE20022C5E20A30022E10C /* AITherapistUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66EE20032C5E20A30022E10C /* AITherapistUITests.swift */,
+				66EE20052C5E20A30022E10C /* AITherapistUITestsLaunchTests.swift */,
+			);
+			path = AITherapistUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66EE1FE32C5E20A20022E10C /* AITherapist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66EE20092C5E20A30022E10C /* Build configuration list for PBXNativeTarget "AITherapist" */;
+			buildPhases = (
+				66EE1FE02C5E20A20022E10C /* Sources */,
+				66EE1FE12C5E20A20022E10C /* Frameworks */,
+				66EE1FE22C5E20A20022E10C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AITherapist;
+			productName = AITherapist;
+			productReference = 66EE1FE42C5E20A20022E10C /* AITherapist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66EE1FF42C5E20A30022E10C /* AITherapistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66EE200C2C5E20A30022E10C /* Build configuration list for PBXNativeTarget "AITherapistTests" */;
+			buildPhases = (
+				66EE1FF12C5E20A30022E10C /* Sources */,
+				66EE1FF22C5E20A30022E10C /* Frameworks */,
+				66EE1FF32C5E20A30022E10C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66EE1FF72C5E20A30022E10C /* PBXTargetDependency */,
+			);
+			name = AITherapistTests;
+			productName = AITherapistTests;
+			productReference = 66EE1FF52C5E20A30022E10C /* AITherapistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66EE1FFE2C5E20A30022E10C /* AITherapistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66EE200F2C5E20A30022E10C /* Build configuration list for PBXNativeTarget "AITherapistUITests" */;
+			buildPhases = (
+				66EE1FFB2C5E20A30022E10C /* Sources */,
+				66EE1FFC2C5E20A30022E10C /* Frameworks */,
+				66EE1FFD2C5E20A30022E10C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66EE20012C5E20A30022E10C /* PBXTargetDependency */,
+			);
+			name = AITherapistUITests;
+			productName = AITherapistUITests;
+			productReference = 66EE1FFF2C5E20A30022E10C /* AITherapistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66EE1FDC2C5E20A20022E10C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					66EE1FE32C5E20A20022E10C = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					66EE1FF42C5E20A30022E10C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 66EE1FE32C5E20A20022E10C;
+					};
+					66EE1FFE2C5E20A30022E10C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 66EE1FE32C5E20A20022E10C;
+					};
+				};
+			};
+			buildConfigurationList = 66EE1FDF2C5E20A20022E10C /* Build configuration list for PBXProject "AITherapist" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66EE1FDB2C5E20A20022E10C;
+			productRefGroup = 66EE1FE52C5E20A20022E10C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66EE1FE32C5E20A20022E10C /* AITherapist */,
+				66EE1FF42C5E20A30022E10C /* AITherapistTests */,
+				66EE1FFE2C5E20A30022E10C /* AITherapistUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66EE1FE22C5E20A20022E10C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EE1FF02C5E20A30022E10C /* Preview Assets.xcassets in Resources */,
+				66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EE1FF32C5E20A30022E10C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EE1FFD2C5E20A30022E10C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66EE1FE02C5E20A20022E10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */,
+				66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EE1FF12C5E20A30022E10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EE1FFA2C5E20A30022E10C /* AITherapistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EE1FFB2C5E20A30022E10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66EE20042C5E20A30022E10C /* AITherapistUITests.swift in Sources */,
+				66EE20062C5E20A30022E10C /* AITherapistUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66EE1FF72C5E20A30022E10C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66EE1FE32C5E20A20022E10C /* AITherapist */;
+			targetProxy = 66EE1FF62C5E20A30022E10C /* PBXContainerItemProxy */;
+		};
+		66EE20012C5E20A30022E10C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66EE1FE32C5E20A20022E10C /* AITherapist */;
+			targetProxy = 66EE20002C5E20A30022E10C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		66EE20072C5E20A30022E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66EE20082C5E20A30022E10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		66EE200A2C5E20A30022E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AITherapist/AITherapist.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AITherapist/Preview Content\"";
+				DEVELOPMENT_TEAM = 5RNKPV8U8V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66EE200B2C5E20A30022E10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AITherapist/AITherapist.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AITherapist/Preview Content\"";
+				DEVELOPMENT_TEAM = 5RNKPV8U8V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66EE200D2C5E20A30022E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RNKPV8U8V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AITherapist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AITherapist";
+			};
+			name = Debug;
+		};
+		66EE200E2C5E20A30022E10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RNKPV8U8V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AITherapist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AITherapist";
+			};
+			name = Release;
+		};
+		66EE20102C5E20A30022E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RNKPV8U8V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AITherapist;
+			};
+			name = Debug;
+		};
+		66EE20112C5E20A30022E10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RNKPV8U8V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AITherapist;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66EE1FDF2C5E20A20022E10C /* Build configuration list for PBXProject "AITherapist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EE20072C5E20A30022E10C /* Debug */,
+				66EE20082C5E20A30022E10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66EE20092C5E20A30022E10C /* Build configuration list for PBXNativeTarget "AITherapist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EE200A2C5E20A30022E10C /* Debug */,
+				66EE200B2C5E20A30022E10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66EE200C2C5E20A30022E10C /* Build configuration list for PBXNativeTarget "AITherapistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EE200D2C5E20A30022E10C /* Debug */,
+				66EE200E2C5E20A30022E10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66EE200F2C5E20A30022E10C /* Build configuration list for PBXNativeTarget "AITherapistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66EE20102C5E20A30022E10C /* Debug */,
+				66EE20112C5E20A30022E10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66EE1FDC2C5E20A20022E10C /* Project object */;
+}
