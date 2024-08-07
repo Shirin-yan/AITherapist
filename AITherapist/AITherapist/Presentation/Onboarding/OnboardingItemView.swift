@@ -23,7 +23,8 @@ struct OnboardingItemView: View {
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.textColor)
-        }.padding(.horizontal, 50)
+            
+        }.padding(50)
 
     }
 }

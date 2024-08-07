@@ -19,6 +19,8 @@
 		66936FE42C63450F005B4D07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66936FE22C63450F005B4D07 /* Localizable.strings */; };
 		66936FE72C6346F2005B4D07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FE62C6346F2005B4D07 /* LoginView.swift */; };
 		66936FE92C6346FA005B4D07 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FE82C6346FA005B4D07 /* LoginVM.swift */; };
+		66936FEC2C635034005B4D07 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FEB2C635034005B4D07 /* PurchaseView.swift */; };
+		66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FED2C635042005B4D07 /* PurchaseItemView.swift */; };
 		66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */; };
 		66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE92C5E20A20022E10C /* ContentView.swift */; };
 		66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE1FEB2C5E20A30022E10C /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		66936FE32C63450F005B4D07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66936FE62C6346F2005B4D07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66936FE82C6346FA005B4D07 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		66936FEB2C635034005B4D07 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		66936FED2C635042005B4D07 /* PurchaseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemView.swift; sourceTree = "<group>"; };
 		66EE1FE42C5E20A20022E10C /* AITherapist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITherapist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistApp.swift; sourceTree = "<group>"; };
 		66EE1FE92C5E20A20022E10C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				66EE1FE92C5E20A20022E10C /* ContentView.swift */,
 				66936FDD2C63435F005B4D07 /* Onboarding */,
 				66936FE52C6346E2005B4D07 /* Login */,
+				66936FEA2C635004005B4D07 /* Purchase */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -167,6 +172,15 @@
 				66936FE62C6346F2005B4D07 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		66936FEA2C635004005B4D07 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				66936FEB2C635034005B4D07 /* PurchaseView.swift */,
+				66936FED2C635042005B4D07 /* PurchaseItemView.swift */,
+			);
+			path = Purchase;
 			sourceTree = "<group>";
 		};
 		66EE1FDB2C5E20A20022E10C = {
@@ -369,6 +383,8 @@
 				66936FCE2C6275B2005B4D07 /* Font.swift in Sources */,
 				66936FDF2C634370005B4D07 /* OnboardingItemView.swift in Sources */,
 				66936FD02C633915005B4D07 /* Collection.swift in Sources */,
+				66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */,
+				66936FEC2C635034005B4D07 /* PurchaseView.swift in Sources */,
 				66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */,
 				66936FDC2C633C43005B4D07 /* OnboardingView.swift in Sources */,
 				66936FE92C6346FA005B4D07 /* LoginVM.swift in Sources */,
