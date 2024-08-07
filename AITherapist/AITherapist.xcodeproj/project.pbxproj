@@ -10,6 +10,10 @@
 		66936FCC2C6265D9005B4D07 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FCB2C6265D9005B4D07 /* Color.swift */; };
 		66936FCE2C6275B2005B4D07 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FCD2C6275B2005B4D07 /* Font.swift */; };
 		66936FD02C633915005B4D07 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FCF2C633915005B4D07 /* Collection.swift */; };
+		66936FD52C633B50005B4D07 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD12C633B4D005B4D07 /* Inter-Bold.ttf */; };
+		66936FD62C633B53005B4D07 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD22C633B4D005B4D07 /* Inter-Medium.ttf */; };
+		66936FD72C633B56005B4D07 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD32C633B4D005B4D07 /* Inter-Regular.ttf */; };
+		66936FD82C633B5A005B4D07 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD42C633B4D005B4D07 /* Inter-SemiBold.ttf */; };
 		66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */; };
 		66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE92C5E20A20022E10C /* ContentView.swift */; };
 		66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE1FEB2C5E20A30022E10C /* Assets.xcassets */; };
@@ -40,6 +44,11 @@
 		66936FCB2C6265D9005B4D07 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		66936FCD2C6275B2005B4D07 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		66936FCF2C633915005B4D07 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		66936FD12C633B4D005B4D07 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		66936FD22C633B4D005B4D07 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		66936FD32C633B4D005B4D07 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		66936FD42C633B4D005B4D07 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		66936FDA2C633BDB005B4D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		66EE1FE42C5E20A20022E10C /* AITherapist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITherapist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistApp.swift; sourceTree = "<group>"; };
 		66EE1FE92C5E20A20022E10C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +128,17 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		66936FD92C633B5F005B4D07 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				66936FD12C633B4D005B4D07 /* Inter-Bold.ttf */,
+				66936FD22C633B4D005B4D07 /* Inter-Medium.ttf */,
+				66936FD32C633B4D005B4D07 /* Inter-Regular.ttf */,
+				66936FD42C633B4D005B4D07 /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		66EE1FDB2C5E20A20022E10C = {
 			isa = PBXGroup;
 			children = (
@@ -142,10 +162,12 @@
 		66EE1FE62C5E20A20022E10C /* AITherapist */ = {
 			isa = PBXGroup;
 			children = (
+				66936FDA2C633BDB005B4D07 /* Info.plist */,
 				66936FC92C62659D005B4D07 /* Core */,
 				66936FC82C626593005B4D07 /* Data */,
 				66936FC72C626585005B4D07 /* Domain */,
 				66936FC62C60DE47005B4D07 /* Presentation */,
+				66936FD92C633B5F005B4D07 /* Fonts */,
 				66EE1FEB2C5E20A30022E10C /* Assets.xcassets */,
 				66EE1FED2C5E20A30022E10C /* AITherapist.entitlements */,
 				66EE1FEE2C5E20A30022E10C /* Preview Content */,
@@ -282,6 +304,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66936FD82C633B5A005B4D07 /* Inter-SemiBold.ttf in Resources */,
+				66936FD62C633B53005B4D07 /* Inter-Medium.ttf in Resources */,
+				66936FD72C633B56005B4D07 /* Inter-Regular.ttf in Resources */,
+				66936FD52C633B50005B4D07 /* Inter-Bold.ttf in Resources */,
 				66EE1FF02C5E20A30022E10C /* Preview Assets.xcassets in Resources */,
 				66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */,
 			);
@@ -476,6 +502,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AITherapist/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -514,6 +541,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AITherapist/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
