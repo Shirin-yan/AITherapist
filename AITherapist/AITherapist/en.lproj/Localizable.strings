@@ -10,3 +10,7 @@
 "onboard_2" = "Chat with AI Therapist with Privacy. Therapy without the waitlist or the awkward silences.";
 "onboard_3" = "Your pocket therapist Always here, always listening. 24/7 Anytime Anywhere";
 
+"sign_in_apple" = "Sign in with Apple";
+"sign_in_google" = "Sign in with Google";
+"welcome" = "Welcome to AI Therapist";
+"login_to_chat" = "Login to Chat";
