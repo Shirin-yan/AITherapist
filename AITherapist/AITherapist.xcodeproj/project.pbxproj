@@ -14,6 +14,9 @@
 		66936FD62C633B53005B4D07 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD22C633B4D005B4D07 /* Inter-Medium.ttf */; };
 		66936FD72C633B56005B4D07 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD32C633B4D005B4D07 /* Inter-Regular.ttf */; };
 		66936FD82C633B5A005B4D07 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66936FD42C633B4D005B4D07 /* Inter-SemiBold.ttf */; };
+		66936FDC2C633C43005B4D07 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FDB2C633C43005B4D07 /* OnboardingView.swift */; };
+		66936FDF2C634370005B4D07 /* OnboardingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FDE2C634370005B4D07 /* OnboardingItemView.swift */; };
+		66936FE42C63450F005B4D07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66936FE22C63450F005B4D07 /* Localizable.strings */; };
 		66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */; };
 		66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE92C5E20A20022E10C /* ContentView.swift */; };
 		66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE1FEB2C5E20A30022E10C /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		66936FD32C633B4D005B4D07 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		66936FD42C633B4D005B4D07 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		66936FDA2C633BDB005B4D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		66936FDB2C633C43005B4D07 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		66936FDE2C634370005B4D07 /* OnboardingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItemView.swift; sourceTree = "<group>"; };
+		66936FE32C63450F005B4D07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66EE1FE42C5E20A20022E10C /* AITherapist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITherapist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistApp.swift; sourceTree = "<group>"; };
 		66EE1FE92C5E20A20022E10C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */,
 				66EE1FE92C5E20A20022E10C /* ContentView.swift */,
+				66936FDD2C63435F005B4D07 /* Onboarding */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -139,6 +146,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		66936FDD2C63435F005B4D07 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				66936FDB2C633C43005B4D07 /* OnboardingView.swift */,
+				66936FDE2C634370005B4D07 /* OnboardingItemView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		66EE1FDB2C5E20A20022E10C = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +187,7 @@
 				66EE1FEB2C5E20A30022E10C /* Assets.xcassets */,
 				66EE1FED2C5E20A30022E10C /* AITherapist.entitlements */,
 				66EE1FEE2C5E20A30022E10C /* Preview Content */,
+				66936FE22C63450F005B4D07 /* Localizable.strings */,
 			);
 			path = AITherapist;
 			sourceTree = "<group>";
@@ -307,6 +324,7 @@
 				66936FD82C633B5A005B4D07 /* Inter-SemiBold.ttf in Resources */,
 				66936FD62C633B53005B4D07 /* Inter-Medium.ttf in Resources */,
 				66936FD72C633B56005B4D07 /* Inter-Regular.ttf in Resources */,
+				66936FE42C63450F005B4D07 /* Localizable.strings in Resources */,
 				66936FD52C633B50005B4D07 /* Inter-Bold.ttf in Resources */,
 				66EE1FF02C5E20A30022E10C /* Preview Assets.xcassets in Resources */,
 				66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */,
@@ -335,8 +353,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66936FCE2C6275B2005B4D07 /* Font.swift in Sources */,
+				66936FDF2C634370005B4D07 /* OnboardingItemView.swift in Sources */,
 				66936FD02C633915005B4D07 /* Collection.swift in Sources */,
 				66EE1FEA2C5E20A20022E10C /* ContentView.swift in Sources */,
+				66936FDC2C633C43005B4D07 /* OnboardingView.swift in Sources */,
 				66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */,
 				66936FCC2C6265D9005B4D07 /* Color.swift in Sources */,
 			);
@@ -373,6 +393,17 @@
 			targetProxy = 66EE20002C5E20A30022E10C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66936FE22C63450F005B4D07 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66936FE32C63450F005B4D07 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		66EE20072C5E20A30022E10C /* Debug */ = {
@@ -513,7 +544,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -521,7 +552,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,7 +584,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -560,7 +592,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
