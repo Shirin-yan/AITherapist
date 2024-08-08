@@ -60,7 +60,7 @@ struct OnboardingView: View {
     }
     
     func skipOnboarding(){
-        
+        Defaults.onboardingShown = true
     }
 }
 

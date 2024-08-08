@@ -33,7 +33,7 @@ struct LoginView: View {
             Spacer()
 
             Button {
-                
+                Defaults.token = UUID().uuidString
             } label: {
                 HStack {
                     Image("apple")
@@ -52,7 +52,7 @@ struct LoginView: View {
                     .padding(.horizontal, 20)
             }
                 Button {
-                    
+                    Defaults.token = UUID().uuidString
                 } label: {
                     HStack {
                         Image("google")

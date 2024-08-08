@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct AITherapistApp: App {
+    @AppStorage(DefaultsKey.onboardingShown.rawValue) var onboardingShown = Defaults.onboardingShown
+    @AppStorage(DefaultsKey.token.rawValue) var token = Defaults.token
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if !onboardingShown {
+                OnboardingView()
+            } else if
+                token.isEmpty {
+                LoginView()
+            } else {
+                ChatlistView()
+            }
         }
     }
 }

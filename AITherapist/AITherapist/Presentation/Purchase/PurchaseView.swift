@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PurchaseView: View {
-    
-    @State var selectedInd = 0
+    @Binding var isPresented: Bool
 
+    @State var selectedInd = 0
+    
     var onboardTitles = ["purchase_1", "purchase_2", "purchase_3"]
     
     var body: some View {
@@ -23,7 +24,7 @@ struct PurchaseView: View {
                     .multilineTextAlignment(.leading)
                 
                 Button {
-                    
+                    isPresented.toggle()
                 } label: {
                     Image(systemName: "xmark")
                         .imageScale(.large)
@@ -106,5 +107,5 @@ struct PurchaseView: View {
 }
 
 #Preview {
-    PurchaseView()
+    PurchaseView(isPresented: .constant(true))
 }
