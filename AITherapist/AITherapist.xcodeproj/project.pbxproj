@@ -22,7 +22,9 @@
 		66936FEC2C635034005B4D07 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FEB2C635034005B4D07 /* PurchaseView.swift */; };
 		66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FED2C635042005B4D07 /* PurchaseItemView.swift */; };
 		66936FF12C648E9B005B4D07 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF02C648E9B005B4D07 /* Defaults.swift */; };
-		66936FF32C64901B005B4D07 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF22C64901B005B4D07 /* Coordinator.swift */; };
+		66936FF62C64921D005B4D07 /* ChatlistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF52C64921D005B4D07 /* ChatlistItemView.swift */; };
+		66936FF82C64A629005B4D07 /* ChatlistVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF72C64A629005B4D07 /* ChatlistVM.swift */; };
+		66936FFA2C64A65B005B4D07 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF92C64A65B005B4D07 /* ChatView.swift */; };
 		66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */; };
 		66EE1FEA2C5E20A20022E10C /* ChatlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EE1FE92C5E20A20022E10C /* ChatlistView.swift */; };
 		66EE1FEC2C5E20A30022E10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EE1FEB2C5E20A30022E10C /* Assets.xcassets */; };
@@ -66,7 +68,9 @@
 		66936FEB2C635034005B4D07 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		66936FED2C635042005B4D07 /* PurchaseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemView.swift; sourceTree = "<group>"; };
 		66936FF02C648E9B005B4D07 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		66936FF22C64901B005B4D07 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		66936FF52C64921D005B4D07 /* ChatlistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatlistItemView.swift; sourceTree = "<group>"; };
+		66936FF72C64A629005B4D07 /* ChatlistVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatlistVM.swift; sourceTree = "<group>"; };
+		66936FF92C64A65B005B4D07 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		66EE1FE42C5E20A20022E10C /* AITherapist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AITherapist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITherapistApp.swift; sourceTree = "<group>"; };
 		66EE1FE92C5E20A20022E10C /* ChatlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatlistView.swift; sourceTree = "<group>"; };
@@ -109,11 +113,11 @@
 			isa = PBXGroup;
 			children = (
 				66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */,
-				66EE1FE92C5E20A20022E10C /* ChatlistView.swift */,
 				66936FDD2C63435F005B4D07 /* Onboarding */,
 				66936FE52C6346E2005B4D07 /* Login */,
+				66936FF42C64920C005B4D07 /* Chatlist */,
+				66936FFB2C64A65E005B4D07 /* Chat */,
 				66936FEA2C635004005B4D07 /* Purchase */,
-				66936FF22C64901B005B4D07 /* Coordinator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -187,6 +191,24 @@
 				66936FED2C635042005B4D07 /* PurchaseItemView.swift */,
 			);
 			path = Purchase;
+			sourceTree = "<group>";
+		};
+		66936FF42C64920C005B4D07 /* Chatlist */ = {
+			isa = PBXGroup;
+			children = (
+				66936FF72C64A629005B4D07 /* ChatlistVM.swift */,
+				66EE1FE92C5E20A20022E10C /* ChatlistView.swift */,
+				66936FF52C64921D005B4D07 /* ChatlistItemView.swift */,
+			);
+			path = Chatlist;
+			sourceTree = "<group>";
+		};
+		66936FFB2C64A65E005B4D07 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				66936FF92C64A65B005B4D07 /* ChatView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		66EE1FDB2C5E20A20022E10C = {
@@ -388,10 +410,12 @@
 			files = (
 				66936FCE2C6275B2005B4D07 /* Font.swift in Sources */,
 				66936FDF2C634370005B4D07 /* OnboardingItemView.swift in Sources */,
-				66936FF32C64901B005B4D07 /* Coordinator.swift in Sources */,
+				66936FF62C64921D005B4D07 /* ChatlistItemView.swift in Sources */,
 				66936FD02C633915005B4D07 /* Collection.swift in Sources */,
+				66936FF82C64A629005B4D07 /* ChatlistVM.swift in Sources */,
 				66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */,
 				66936FEC2C635034005B4D07 /* PurchaseView.swift in Sources */,
+				66936FFA2C64A65B005B4D07 /* ChatView.swift in Sources */,
 				66EE1FEA2C5E20A20022E10C /* ChatlistView.swift in Sources */,
 				66936FDC2C633C43005B4D07 /* OnboardingView.swift in Sources */,
 				66936FE92C6346FA005B4D07 /* LoginVM.swift in Sources */,

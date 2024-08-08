@@ -20,7 +20,9 @@ struct AITherapistApp: App {
                 token.isEmpty {
                 LoginView()
             } else {
-                ChatlistView()
+                NavigationView {
+                    ChatlistView()
+                }.navigationViewStyle(StackNavigationViewStyle())
             }
         }
     }

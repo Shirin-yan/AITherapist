@@ -9,6 +9,8 @@
 "onboard_1" = "Save $$$ on Therapy Sessions. Therapy that won't break the bank";
 "onboard_2" = "Chat with AI Therapist with Privacy. Therapy without the waitlist or the awkward silences.";
 "onboard_3" = "Your pocket therapist Always here, always listening. 24/7 Anytime Anywhere";
+"continue" = "Continue";
+"skip" = "Skip";
 
 "sign_in_apple" = "Sign in with Apple";
 "sign_in_google" = "Sign in with Google";
@@ -22,3 +24,6 @@
 "purchase_1" = "Save $$$ on Expensive Therapy Sessions";
 "purchase_2" = "Get Instant Therapy Session ";
 "purchase_3" = "Get Therapy Anytime Anywhere";
+
+"chat_now" = "Chat Now";
+"find_your_therapist" = "Find Your Therapist";
