@@ -4,7 +4,6 @@
 
 ## User settings
 xcuserdata/
-
 ## Obj-C/Swift specific
 *.hmap
 
@@ -60,3 +59,5 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+AITherapist/AITherapist/CONSTANTS.swift
