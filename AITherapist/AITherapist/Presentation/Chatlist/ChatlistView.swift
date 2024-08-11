@@ -31,7 +31,7 @@ struct ChatlistView: View {
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
             .onAppear {
-//                showPurchase.toggle()
+                showPurchase.toggle()
             }.fullScreenCover(isPresented: $showPurchase, content: {
                 PurchaseView(isPresented: $showPurchase)
             })
