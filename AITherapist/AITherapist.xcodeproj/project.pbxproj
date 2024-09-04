@@ -12,6 +12,10 @@
 		6601DA3D2C88C0B400EBADDA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6601DA3C2C88C0B400EBADDA /* FirebaseFirestore */; };
 		6601DA3F2C88C0B400EBADDA /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 6601DA3E2C88C0B400EBADDA /* FirebaseMessaging */; };
 		6601DA412C88C0B400EBADDA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6601DA402C88C0B400EBADDA /* FirebaseStorage */; };
+		6601DA432C88DA2800EBADDA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA422C88DA2800EBADDA /* MainView.swift */; };
+		6601DA462C88DA6100EBADDA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA452C88DA6100EBADDA /* SettingsView.swift */; };
+		6601DA492C88DA7D00EBADDA /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA482C88DA7D00EBADDA /* FavoriteListView.swift */; };
+		6601DA4D2C88DAC700EBADDA /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA4C2C88DAC700EBADDA /* MainVM.swift */; };
 		6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA342C68661A00210D6A /* NetworkClient.swift */; };
 		6677EA372C68662B00210D6A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA362C68662B00210D6A /* ApiEndpoint.swift */; };
 		6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA382C68664200210D6A /* CONSTANTS.swift */; };
@@ -74,6 +78,10 @@
 
 /* Begin PBXFileReference section */
 		6601DA372C88BA5D00EBADDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6601DA422C88DA2800EBADDA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6601DA452C88DA6100EBADDA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6601DA482C88DA7D00EBADDA /* FavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
+		6601DA4C2C88DAC700EBADDA /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		6677EA342C68661A00210D6A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		6677EA362C68662B00210D6A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		6677EA382C68664200210D6A /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
@@ -151,15 +159,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6601DA442C88DA5500EBADDA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6601DA452C88DA6100EBADDA /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6601DA472C88DA6B00EBADDA /* FavoriteList */ = {
+			isa = PBXGroup;
+			children = (
+				6601DA482C88DA7D00EBADDA /* FavoriteListView.swift */,
+			);
+			path = FavoriteList;
+			sourceTree = "<group>";
+		};
+		6601DA4E2C88DACB00EBADDA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6601DA422C88DA2800EBADDA /* MainView.swift */,
+				6601DA4C2C88DAC700EBADDA /* MainVM.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		66936FC62C60DE47005B4D07 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */,
+				6601DA4E2C88DACB00EBADDA /* Main */,
 				66936FDD2C63435F005B4D07 /* Onboarding */,
 				66936FE52C6346E2005B4D07 /* Login */,
 				66936FF42C64920C005B4D07 /* Chatlist */,
+				6601DA472C88DA6B00EBADDA /* FavoriteList */,
 				66936FFB2C64A65E005B4D07 /* Chat */,
 				66936FEA2C635004005B4D07 /* Purchase */,
+				6601DA442C88DA5500EBADDA /* Settings */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -487,14 +523,17 @@
 				66936FFF2C64AB3F005B4D07 /* TextMsgItem.swift in Sources */,
 				6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */,
 				66936FDF2C634370005B4D07 /* OnboardingItemView.swift in Sources */,
+				6601DA4D2C88DAC700EBADDA /* MainVM.swift in Sources */,
 				66BF7C732C6DF4410048D8B6 /* Message.swift in Sources */,
 				66936FF62C64921D005B4D07 /* ChatlistItemView.swift in Sources */,
 				66936FD02C633915005B4D07 /* Collection.swift in Sources */,
 				6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */,
 				66936FF82C64A629005B4D07 /* ChatlistVM.swift in Sources */,
+				6601DA492C88DA7D00EBADDA /* FavoriteListView.swift in Sources */,
 				6677EA432C686A3400210D6A /* AuthDelegate.swift in Sources */,
 				66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */,
 				66936FEC2C635034005B4D07 /* PurchaseView.swift in Sources */,
+				6601DA462C88DA6100EBADDA /* SettingsView.swift in Sources */,
 				66BF7C792C6E8B910048D8B6 /* Encodable.swift in Sources */,
 				66936FFA2C64A65B005B4D07 /* ChatView.swift in Sources */,
 				66EE1FEA2C5E20A20022E10C /* ChatlistView.swift in Sources */,
@@ -505,6 +544,7 @@
 				66BF7C712C6DF4390048D8B6 /* User.swift in Sources */,
 				66BF7C752C6E2AF80048D8B6 /* Therapist.swift in Sources */,
 				66936FF12C648E9B005B4D07 /* Defaults.swift in Sources */,
+				6601DA432C88DA2800EBADDA /* MainView.swift in Sources */,
 				66BF7C772C6E2B2C0048D8B6 /* Tag.swift in Sources */,
 				66936FE72C6346F2005B4D07 /* LoginView.swift in Sources */,
 				66936FCC2C6265D9005B4D07 /* Color.swift in Sources */,

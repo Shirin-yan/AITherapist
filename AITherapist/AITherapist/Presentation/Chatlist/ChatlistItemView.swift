@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ChatlistItemView: View {
     var data: Therapist
-    @State var isFavorited = false
+    @State var isFavorited: Bool
     
-    init(data: Therapist) {
+    init(data: Therapist, isFavorited: Bool = false) {
         self.data = data
         self.isFavorited = Defaults.favoritedTherapists.contains(data.id)
     }
+    
     var body: some View {
         VStack {
             HStack(spacing: 10) {
@@ -27,8 +28,6 @@ struct ChatlistItemView: View {
                     .frame(width: 70, height: 70, alignment: .center)
                     .background(Color.accentColor)
                     .cornerRadius(40)
-
-
                 
                 VStack {
                     HStack {

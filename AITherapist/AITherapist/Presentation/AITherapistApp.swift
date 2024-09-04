@@ -24,7 +24,7 @@ struct AITherapistApp: App {
                 LoginView()
             } else {
                 NavigationView {
-                    ChatlistView()
+                    MainView()
                 }.navigationViewStyle(StackNavigationViewStyle())
             }
         }

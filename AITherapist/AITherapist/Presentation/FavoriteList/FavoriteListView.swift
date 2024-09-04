@@ -1,21 +1,18 @@
 //
-//  ContentView.swift
+//  FavoriteListView.swift
 //  AITherapist
 //
-//  Created by Shirin-Yan on 03.08.2024.
+//  Created by Shirin-Yan on 04.09.2024.
 //
 
 import SwiftUI
 
-struct ChatlistView: View {
-    @StateObject var vm = ChatlistVM()
-
-    @State var showPurchase = false
-    let m = FirestoreManager()
-
+struct FavoriteListView: View {
+    @State var data: [Therapist] = []
+    
     var body: some View {
         VStack(spacing: 20) {
-            Text(LocalizedStringKey("find_your_therapist"))
+            Text(LocalizedStringKey("Favorited Therapists"))
                 .font(.inter(20, fontWeight: .medium))
                 .foregroundColor(.black)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -24,23 +21,19 @@ struct ChatlistView: View {
 
             ScrollView {
                 LazyVStack {
-                    ForEach(vm.data) { data in
-                        ChatlistItemView(data: data)
+                    ForEach(data) { data in
+                        ChatlistItemView(data: data, isFavorited: true)
                     }
                 }
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
             .onAppear {
-//                showPurchase.toggle()
-            }.fullScreenCover(isPresented: $showPurchase, content: {
-                PurchaseView(isPresented: $showPurchase)
-            })
+                data = FirestoreManager.shared.getFavTherapists()
+            }
     }
 }
 
 #Preview {
-    ChatlistView()
+    FavoriteListView()
 }
-
-

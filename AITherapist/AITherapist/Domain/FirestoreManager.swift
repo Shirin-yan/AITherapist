@@ -64,6 +64,11 @@ class FirestoreManager {
         }
     }
     
+    func getFavTherapists() -> [Therapist] {
+        if therapists.isEmpty || Defaults.favoritedTherapists.isEmpty { return [] }
+        return Defaults.favoritedTherapists.compactMap({getTherapist(id: $0)})
+    }
+    
     func getTags(completion: @escaping ([Tag])->()){
         tagRef.observeSingleEvent(of: .value) { snapshot in
             var dict = snapshot.value as? [[String: Any]?]
@@ -75,5 +80,9 @@ class FirestoreManager {
     
     func getTag(id: Int) -> Tag? {
         return tags.first(where: {$0.id == id })
+    }
+    
+    func getTherapist(id: Int) -> Therapist? {
+        return therapists.first(where: {$0.id == id })
     }
 }
