@@ -10,6 +10,7 @@ import Foundation
 enum DefaultsKey: String {
     case onboardingShown
     case token
+    case favoritedTherapists
 }
 
 class Defaults {
@@ -21,5 +22,10 @@ class Defaults {
     static var token: String {
         get { UserDefaults.standard.string(forKey: DefaultsKey.token.rawValue) ?? "" }
         set { UserDefaults.standard.setValue(newValue, forKey: DefaultsKey.token.rawValue)}
+    }
+    
+    static var favoritedTherapists: [Int] {
+        get { (UserDefaults.standard.array(forKey: DefaultsKey.favoritedTherapists.rawValue) ?? []) as [Int] }
+        set { UserDefaults.standard.setValue(newValue, forKey: DefaultsKey.favoritedTherapists.rawValue)}
     }
 }

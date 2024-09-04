@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ChatlistItemView: View {
     var data: Therapist
+    @State var isFavorited = false
     
+    init(data: Therapist) {
+        self.data = data
+        self.isFavorited = Defaults.favoritedTherapists.contains(data.id)
+    }
     var body: some View {
         VStack {
             HStack(spacing: 10) {
@@ -26,20 +31,27 @@ struct ChatlistItemView: View {
 
                 
                 VStack {
-//                    HStack {
+                    HStack {
                         Text(data.name)
                             .foregroundColor(.textColor)
                             .font(.inter(20, fontWeight: .medium))
                             .frame(maxWidth: .infinity, alignment: .leading)
-//                        Button {
-//                            
-//                        } label: {
-//                            Image(systemName: "heart")
-//                                .foregroundColor(.red)
-//                                .imageScale(.large)
-//                                .frame(width: 40, height: 40, alignment: .center)
-//                        }
-//                    }
+                        
+                        Button {
+                            if Defaults.favoritedTherapists.contains(data.id) {
+                                Defaults.favoritedTherapists.removeAll(where: {$0 == data.id})
+                                isFavorited = false
+                            } else {
+                                Defaults.favoritedTherapists.append(data.id)
+                                isFavorited = true
+                            }
+                        } label: {
+                            Image(systemName: isFavorited ? "heart.fill" : "heart")
+                                .foregroundColor(.red)
+                                .imageScale(.large)
+                                .frame(width: 40, height: 40, alignment: .center)
+                        }
+                    }
                     
                     Text(data.about)
                         .foregroundColor(.textColor)
