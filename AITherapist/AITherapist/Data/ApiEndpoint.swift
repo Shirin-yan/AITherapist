@@ -13,11 +13,35 @@ protocol Endpoint {
     var path: String { get }
     var encoder: ParameterEncoder { get }
     var header: HTTPHeaders { get }
-    var body: [String: String]? { get }
+    var body: OpenAiBody? { get }
 }
 
 let BASE_URL = ""
 
-enum Endpoints {
+enum Endpoints: Endpoint {
+    case openAiCompletion([OpenAiBodyMessage])
     
+    var method: Alamofire.HTTPMethod {
+        return .post
+    }
+    
+    var path: String {
+        return "https://api.openai.com/v1/engines/gpt-4o-mini/completions"
+    }
+    
+    var encoder: any Alamofire.ParameterEncoder {
+        return JSONParameterEncoder.default
+    }
+    
+    var header: Alamofire.HTTPHeaders {
+        return ["Content-Type": "application/json",
+                "Authorization": "Bearer \(OPENAI_API_KEY)"]
+    }
+    
+    var body: OpenAiBody? {
+        switch self {
+        case .openAiCompletion(let array):
+            return OpenAiBody(messages: array)
+        }
+    }
 }

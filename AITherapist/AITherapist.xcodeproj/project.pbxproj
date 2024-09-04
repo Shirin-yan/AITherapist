@@ -16,6 +16,9 @@
 		6601DA462C88DA6100EBADDA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA452C88DA6100EBADDA /* SettingsView.swift */; };
 		6601DA492C88DA7D00EBADDA /* FavoriteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA482C88DA7D00EBADDA /* FavoriteListView.swift */; };
 		6601DA4D2C88DAC700EBADDA /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA4C2C88DAC700EBADDA /* MainVM.swift */; };
+		6601DA502C88E49C00EBADDA /* OpenAiBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA4F2C88E49C00EBADDA /* OpenAiBody.swift */; };
+		6601DA522C88E4A700EBADDA /* OpenAiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA512C88E4A700EBADDA /* OpenAiResponse.swift */; };
+		6601DA542C88E6CB00EBADDA /* OpenAiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA532C88E6CB00EBADDA /* OpenAiMessage.swift */; };
 		6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA342C68661A00210D6A /* NetworkClient.swift */; };
 		6677EA372C68662B00210D6A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA362C68662B00210D6A /* ApiEndpoint.swift */; };
 		6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA382C68664200210D6A /* CONSTANTS.swift */; };
@@ -82,6 +85,9 @@
 		6601DA452C88DA6100EBADDA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6601DA482C88DA7D00EBADDA /* FavoriteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListView.swift; sourceTree = "<group>"; };
 		6601DA4C2C88DAC700EBADDA /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		6601DA4F2C88E49C00EBADDA /* OpenAiBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiBody.swift; sourceTree = "<group>"; };
+		6601DA512C88E4A700EBADDA /* OpenAiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiResponse.swift; sourceTree = "<group>"; };
+		6601DA532C88E6CB00EBADDA /* OpenAiMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiMessage.swift; sourceTree = "<group>"; };
 		6677EA342C68661A00210D6A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		6677EA362C68662B00210D6A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		6677EA382C68664200210D6A /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
@@ -218,6 +224,9 @@
 				66BF7C742C6E2AF80048D8B6 /* Therapist.swift */,
 				66BF7C702C6DF4390048D8B6 /* User.swift */,
 				66BF7C722C6DF4410048D8B6 /* Message.swift */,
+				6601DA4F2C88E49C00EBADDA /* OpenAiBody.swift */,
+				6601DA512C88E4A700EBADDA /* OpenAiResponse.swift */,
+				6601DA532C88E6CB00EBADDA /* OpenAiMessage.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -516,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6601DA502C88E49C00EBADDA /* OpenAiBody.swift in Sources */,
 				66BF7C6F2C6DF2500048D8B6 /* FirestoreManager.swift in Sources */,
 				6677EA372C68662B00210D6A /* ApiEndpoint.swift in Sources */,
 				66936FCE2C6275B2005B4D07 /* Font.swift in Sources */,
@@ -535,6 +545,7 @@
 				66936FEC2C635034005B4D07 /* PurchaseView.swift in Sources */,
 				6601DA462C88DA6100EBADDA /* SettingsView.swift in Sources */,
 				66BF7C792C6E8B910048D8B6 /* Encodable.swift in Sources */,
+				6601DA522C88E4A700EBADDA /* OpenAiResponse.swift in Sources */,
 				66936FFA2C64A65B005B4D07 /* ChatView.swift in Sources */,
 				66EE1FEA2C5E20A20022E10C /* ChatlistView.swift in Sources */,
 				66936FDC2C633C43005B4D07 /* OnboardingView.swift in Sources */,
@@ -543,6 +554,7 @@
 				66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */,
 				66BF7C712C6DF4390048D8B6 /* User.swift in Sources */,
 				66BF7C752C6E2AF80048D8B6 /* Therapist.swift in Sources */,
+				6601DA542C88E6CB00EBADDA /* OpenAiMessage.swift in Sources */,
 				66936FF12C648E9B005B4D07 /* Defaults.swift in Sources */,
 				6601DA432C88DA2800EBADDA /* MainView.swift in Sources */,
 				66BF7C772C6E2B2C0048D8B6 /* Tag.swift in Sources */,
