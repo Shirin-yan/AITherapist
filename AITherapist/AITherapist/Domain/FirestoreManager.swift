@@ -55,8 +55,12 @@ class FirestoreManager {
         therapistRef.observeSingleEvent(of: .value) { snapshot in
             var dict = snapshot.value as? [[String: Any]?]
             dict?.removeAll(where: {$0 == nil})
-            self.therapists = dict?.map({Therapist($0!)}) ?? []
-            completion(self.therapists)
+            dict?.forEach({ therapistDict in
+                let tagIds = therapistDict!["tags"] as? [Int] ?? []
+                let tags = tagIds.map({self.getTag(id: $0)!})
+                self.therapists = dict?.map({Therapist($0!, tags: tags)}) ?? []
+                completion(self.therapists)
+            })
         }
     }
     
@@ -67,5 +71,9 @@ class FirestoreManager {
             self.tags = dict?.map({Tag($0!)}) ?? []
             completion(self.tags)
         }
+    }
+    
+    func getTag(id: Int) -> Tag? {
+        return tags.first(where: {$0.id == id })
     }
 }

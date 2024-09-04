@@ -12,13 +12,13 @@ struct Therapist: Identifiable {
     var name: String
     var about: String
     var avatar: String = ""
-    var tags: [Int]
+    var tags: [Tag]
     
-    init(_ data: [String: Any]){
+    init(_ data: [String: Any], tags: [Tag]){
         id = data["id"] as? Int ?? 0
         name = data["name"] as? String ?? ""
         about = data["about"] as? String ?? ""
         avatar = data["avatar"] as? String ?? ""
-        tags = data["tags"] as? [Int] ?? []
+        self.tags = tags
     }
 }
