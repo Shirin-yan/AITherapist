@@ -66,7 +66,7 @@ struct ChatlistItemView: View {
                 Spacer()
                 
                 NavigationLink {
-                    ChatView()
+                    ChatView(vm: ChatVM(threadId: data.id))
                 } label: {
                     Text(LocalizedStringKey("chat_now"))
                         .foregroundColor(.textColor)

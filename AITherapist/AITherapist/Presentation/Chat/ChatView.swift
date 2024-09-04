@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
-    @StateObject var vm = ChatVM()
+    @StateObject var vm: ChatVM
     @State var message = ""
     
     var body: some View {
@@ -38,7 +38,7 @@ struct ChatView: View {
                     Image("send")
                 }.frame(width: 40, height: 40)
                     .padding(10)
-                    .disabled(message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                    .disabled(message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || vm.inProgress)
             }.frame(minHeight: 60)
                 .background(Color.cardBgColor)
                 .cornerRadius(12)
@@ -55,8 +55,4 @@ struct ChatView: View {
 
         }
     }
-}
-
-#Preview {
-    ChatView()
 }

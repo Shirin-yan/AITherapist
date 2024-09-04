@@ -6,11 +6,10 @@
 //
 
 import Foundation
-
-
-
-
+import Alamofire
 
 class ChatRepo {
-    
+    func getAnswer(messages: [OpenAiMessage], completion: @escaping (Result<OpenAiResponse, AFError>)->()) {
+        Network.perform(endpoint: Endpoints.openAiCompletion(messages), completionHandler: completion)
+    }
 }

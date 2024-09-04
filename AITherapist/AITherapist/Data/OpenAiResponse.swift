@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OpenAIResponse: Codable {
+struct OpenAiResponse: Codable {
     let id: String
     let model: String
     let choices: [Choice]

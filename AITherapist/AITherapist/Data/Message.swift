@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Message: Codable {
-    var threadId: String
+struct Message: Codable, Identifiable {
+    var id: String
+    var threadId: Int
     var isSenderMe: Bool
     var text: String
     var datetime: String

@@ -19,14 +19,14 @@ protocol Endpoint {
 let BASE_URL = ""
 
 enum Endpoints: Endpoint {
-    case openAiCompletion([OpenAiBodyMessage])
+    case openAiCompletion([OpenAiMessage])
     
     var method: Alamofire.HTTPMethod {
         return .post
     }
     
     var path: String {
-        return "https://api.openai.com/v1/engines/gpt-4o-mini/completions"
+        return "https://api.openai.com/v1/chat/completions"
     }
     
     var encoder: any Alamofire.ParameterEncoder {
@@ -41,7 +41,8 @@ enum Endpoints: Endpoint {
     var body: OpenAiBody? {
         switch self {
         case .openAiCompletion(let array):
-            return OpenAiBody(messages: array)
+            var m = [INITIAL_MESSAGE]+array
+            return OpenAiBody(messages: m)
         }
     }
 }
