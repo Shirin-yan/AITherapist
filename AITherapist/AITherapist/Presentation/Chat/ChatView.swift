@@ -17,7 +17,7 @@ struct ChatView: View {
                 LazyVStack(spacing: 10) {
                     ForEach(vm.data.enumeratedArray(), id: \.offset) { ind, i in
                         VStack {
-                            TextMsgItem(data: i, isOwn: ind.isMultiple(of: 2))
+                            TextMsgItem(data: i.text, isOwn: i.isSenderMe)
                         }.scaleEffect(x: 1, y: -1)
                     }
                 }.padding(.horizontal, 20)

@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct AITherapistApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     @AppStorage(DefaultsKey.onboardingShown.rawValue) var onboardingShown = Defaults.onboardingShown
     @AppStorage(DefaultsKey.token.rawValue) var token = Defaults.token
-    
+
     var body: some Scene {
         WindowGroup {
             if !onboardingShown {
@@ -23,7 +26,18 @@ struct AITherapistApp: App {
                 NavigationView {
                     ChatlistView()
                 }.navigationViewStyle(StackNavigationViewStyle())
+                    .onAppear {
+                        FirestoreManager.shared.getData()
+                    }
             }
         }
     }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    return true
+  }
 }

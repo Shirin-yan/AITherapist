@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyC6X2O1BSldzcsE5UuOheJC7qCKzv2yQoA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>37587929346</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.manimau.AITherapist</string>
+	<key>PROJECT_ID</key>
+	<string>aitherapist-3e11d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>aitherapist-3e11d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:37587929346:ios:1da478bd7fdf17e0315a1b</string>
+	<key>DATABASE_URL</key>
+	<string>https://aitherapist-3e11d-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

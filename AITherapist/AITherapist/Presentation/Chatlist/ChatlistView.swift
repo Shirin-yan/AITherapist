@@ -11,7 +11,8 @@ struct ChatlistView: View {
     @StateObject var vm = ChatlistVM()
 
     @State var showPurchase = false
-    
+    let m = FirestoreManager()
+
     var body: some View {
         VStack(spacing: 20) {
             Text(LocalizedStringKey("find_your_therapist"))
