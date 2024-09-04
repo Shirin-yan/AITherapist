@@ -26,9 +26,6 @@ struct AITherapistApp: App {
                 NavigationView {
                     ChatlistView()
                 }.navigationViewStyle(StackNavigationViewStyle())
-                    .onAppear {
-                        FirestoreManager.shared.getData()
-                    }
             }
         }
     }

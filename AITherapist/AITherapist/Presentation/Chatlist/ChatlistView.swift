@@ -24,9 +24,9 @@ struct ChatlistView: View {
 
             ScrollView {
                 LazyVStack {
-                    ChatlistItemView()
-                    ChatlistItemView()
-                    ChatlistItemView()
+                    ForEach(vm.data) { data in
+                        ChatlistItemView(data: data)
+                    }
                 }
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)

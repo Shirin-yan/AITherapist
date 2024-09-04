@@ -8,38 +8,46 @@
 import SwiftUI
 
 struct ChatlistItemView: View {
-
+    var data: Therapist
+    
     var body: some View {
         VStack {
             HStack(spacing: 10) {
-                Image(systemName: "person.fill")
-                    .foregroundColor(.textColor)
-                    .imageScale(.large)
+                AsyncImage(url: URL(string: data.avatar)) { _ in
+                    
+                } placeholder: {
+                    Image(systemName: "person.fill")
+                        .imageScale(.large)
+                }.foregroundColor(.textColor)
                     .frame(width: 70, height: 70, alignment: .center)
                     .background(Color.accentColor)
                     .cornerRadius(40)
+
+
                 
                 VStack {
-                    HStack {
-                        Text("Emily Williams")
+//                    HStack {
+                        Text(data.name)
                             .foregroundColor(.textColor)
                             .font(.inter(20, fontWeight: .medium))
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "heart")
-                                .foregroundColor(.red)
-                                .imageScale(.large)
-                                .frame(width: 40, height: 40, alignment: .center)
-                        }
-                    }
+//                        Button {
+//                            
+//                        } label: {
+//                            Image(systemName: "heart")
+//                                .foregroundColor(.red)
+//                                .imageScale(.large)
+//                                .frame(width: 40, height: 40, alignment: .center)
+//                        }
+//                    }
                     
-                    Text("Emily is a dedicated therapist specializing in cognitive behavioral therapy.")
+                    Text(data.about)
                         .foregroundColor(.textColor)
+                        .multilineTextAlignment(.leading)
                         .font(.inter(12, fontWeight: .medium))
                         .lineLimit(2)
-                    
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
                 }
             }
             
@@ -65,8 +73,4 @@ struct ChatlistItemView: View {
             .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.blueColor.opacity(0.5), lineWidth: 1))
             .padding(.horizontal, 20)
     }
-}
-
-#Preview {
-    ChatlistItemView()
 }

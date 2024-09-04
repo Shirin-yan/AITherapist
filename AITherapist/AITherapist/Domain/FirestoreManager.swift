@@ -21,8 +21,8 @@ class FirestoreManager {
 
     func getData(){
         getUser(id: Defaults.token)
-        getTherapists()
-        getTags()
+        getTherapists { _ in }
+        getTags { _ in }
     }
     
     func getUser(id: String) {
@@ -51,19 +51,21 @@ class FirestoreManager {
         return id
     }
     
-    func getTherapists(){
+    func getTherapists(completion: @escaping ([Therapist])->()){
         therapistRef.observeSingleEvent(of: .value) { snapshot in
             var dict = snapshot.value as? [[String: Any]?]
             dict?.removeAll(where: {$0 == nil})
             self.therapists = dict?.map({Therapist($0!)}) ?? []
+            completion(self.therapists)
         }
     }
     
-    func getTags(){
+    func getTags(completion: @escaping ([Tag])->()){
         tagRef.observeSingleEvent(of: .value) { snapshot in
             var dict = snapshot.value as? [[String: Any]?]
             dict?.removeAll(where: {$0 == nil})
             self.tags = dict?.map({Tag($0!)}) ?? []
+            completion(self.tags)
         }
     }
 }

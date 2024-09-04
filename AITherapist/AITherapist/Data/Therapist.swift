@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Therapist {
+struct Therapist: Identifiable {
     var id: Int
     var name: String
     var about: String
