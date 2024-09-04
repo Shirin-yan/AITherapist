@@ -20,7 +20,8 @@ class ChatVM: ObservableObject {
 
     init(threadId: Int) {
         self.threadId = threadId
-        
+        data = FirestoreManager.shared.getThreadMessage(threadId: threadId)
+        openAiBodyMessage = data.map({OpenAiMessage(role: $0.isSenderMe ? "assistant" : "user", content: $0.text) })
     }
     
     func sendMsg(data: String){
@@ -46,5 +47,6 @@ class ChatVM: ObservableObject {
     
     func saveMsgToFirebase(msg: Message){
         self.data.insert(msg, at: 0)
+        FirestoreManager.shared.saveMessage(msg: msg)
     }
 }

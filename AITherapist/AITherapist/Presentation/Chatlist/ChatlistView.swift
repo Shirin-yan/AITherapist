@@ -10,7 +10,6 @@ import SwiftUI
 struct ChatlistView: View {
     @StateObject var vm = ChatlistVM()
 
-    @State var showPurchase = false
     let m = FirestoreManager()
 
     var body: some View {
@@ -31,10 +30,8 @@ struct ChatlistView: View {
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
-            .onAppear {
-//                showPurchase.toggle()
-            }.fullScreenCover(isPresented: $showPurchase, content: {
-                PurchaseView(isPresented: $showPurchase)
+            .fullScreenCover(isPresented: $vm.showPurchase, content: {
+                PurchaseView(isPresented: $vm.showPurchase)
             })
     }
 }

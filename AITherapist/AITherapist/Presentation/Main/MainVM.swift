@@ -13,6 +13,7 @@ class MainVM: ObservableObject {
     
     init() {
         inProgress = true
+        FirestoreManager.shared.getUser(id: Defaults.token) 
         FirestoreManager.shared.getTags { tags in
             FirestoreManager.shared.getTherapists { therapists in
                 self.inProgress = false
