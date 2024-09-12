@@ -338,6 +338,7 @@
 			children = (
 				6677EA382C68664200210D6A /* CONSTANTS.swift */,
 				66936FDA2C633BDB005B4D07 /* Info.plist */,
+				6601DA372C88BA5D00EBADDA /* GoogleService-Info.plist */,
 				66936FC92C62659D005B4D07 /* Core */,
 				66936FC82C626593005B4D07 /* Data */,
 				66936FC72C626585005B4D07 /* Domain */,
@@ -345,7 +346,6 @@
 				66936FD92C633B5F005B4D07 /* Fonts */,
 				66EE1FEB2C5E20A30022E10C /* Assets.xcassets */,
 				66EE1FED2C5E20A30022E10C /* AITherapist.entitlements */,
-				6601DA372C88BA5D00EBADDA /* GoogleService-Info.plist */,
 				66EE1FEE2C5E20A30022E10C /* Preview Content */,
 				66936FE22C63450F005B4D07 /* Localizable.strings */,
 			);
