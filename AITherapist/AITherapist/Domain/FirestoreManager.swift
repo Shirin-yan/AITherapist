@@ -21,9 +21,20 @@ class FirestoreManager {
     private let tagRef = Database.database().reference().child("tags")
 
     func getData(){
+        getInitialMessage()
         getUser(id: Defaults.token)
         getTherapists { _ in }
         getTags { _ in }
+    }
+
+    func getInitialMessage(){
+        Database.database().reference().child("initial_message").observeSingleEvent(of: .value) { snapshot in
+            if let dict = snapshot.value as? [String: String] {
+                INITIAL_MESSAGE = OpenAiMessage(role: dict["role"] ?? INITIAL_MESSAGE.role,
+                                                content: dict["content"] ?? INITIAL_MESSAGE.content)
+            }
+        }
+
     }
 
     func getUser(id: String) {
