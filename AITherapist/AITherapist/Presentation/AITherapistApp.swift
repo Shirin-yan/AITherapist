@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import Adapty
+import AdaptyUI
 
 @main
 struct AITherapistApp: App {
@@ -37,7 +38,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         FirestoreManager.shared.getInitialMessage()
-        Adapty.activate("public_live_wHl6IXT7.JdE7IGbFnA4yTG70HnFf")
+        
+        let configurationBuilder = Adapty.Configuration
+            .Builder(withAPIKey: ADAPTY_ID)
+            .with(observerMode: false)
+            .with(idfaCollectionDisabled: false)
+            .with(ipAddressCollectionDisabled: false)
+        
+        Adapty.activate(with: configurationBuilder)
+        AdaptyUI.activate()
+
         return true
     }
 }

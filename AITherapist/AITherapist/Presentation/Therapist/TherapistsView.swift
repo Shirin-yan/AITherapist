@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct TherapistsView: View {
+    @State var data: [Therapist] = FirestoreManager.shared.therapists
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 20) {
+            Text(LocalizedStringKey("find_your_therapist"))
+                .font(.inter(20, fontWeight: .medium))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+                .padding(.horizontal, 20)
+
+            TherapistList(data: data)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .onAppear {
+                FirestoreManager.shared.getTherapists { list in
+                    data = list
+                }
+            }.background(Color.white.ignoresSafeArea())
     }
 }
 

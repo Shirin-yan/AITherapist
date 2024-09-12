@@ -20,9 +20,9 @@ struct FavoriteListView: View {
                 .padding(.horizontal, 20)
             if !data.isEmpty {
                 ScrollView {
-                    LazyVStack {
+                    LazyVStack(spacing: 14) {
                         ForEach(data) { data in
-                            ChatlistItemView(data: data, isFavorited: true)
+                            ChatlistItemView(data: data)
                         }
                     }
                 }
@@ -40,7 +40,7 @@ struct FavoriteListView: View {
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.primaryColor.opacity(0.5).ignoresSafeArea())
+            .background(Color.white.ignoresSafeArea())
             .onAppear {
                 data = FirestoreManager.shared.getFavTherapists()
             }

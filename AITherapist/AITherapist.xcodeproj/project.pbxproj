@@ -22,6 +22,10 @@
 		6601DA562C88EC5E00EBADDA /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA552C88EC5E00EBADDA /* Resolver.swift */; };
 		6639942C2C93092800570E56 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 6639942B2C93092800570E56 /* Adapty */; };
 		6639942E2C93092800570E56 /* AdaptyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6639942D2C93092800570E56 /* AdaptyUI */; };
+		663994302C9333E200570E56 /* TherapistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639942F2C9333E200570E56 /* TherapistList.swift */; };
+		663994332C93378600570E56 /* TherapistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663994322C93378600570E56 /* TherapistsView.swift */; };
+		663994352C9345DC00570E56 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663994342C9345DC00570E56 /* SubscriptionService.swift */; };
+		663994372C93460000570E56 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663994362C93460000570E56 /* View.swift */; };
 		6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA342C68661A00210D6A /* NetworkClient.swift */; };
 		6677EA372C68662B00210D6A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA362C68662B00210D6A /* ApiEndpoint.swift */; };
 		6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA382C68664200210D6A /* CONSTANTS.swift */; };
@@ -46,7 +50,6 @@
 		66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FED2C635042005B4D07 /* PurchaseItemView.swift */; };
 		66936FF12C648E9B005B4D07 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF02C648E9B005B4D07 /* Defaults.swift */; };
 		66936FF62C64921D005B4D07 /* ChatlistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF52C64921D005B4D07 /* ChatlistItemView.swift */; };
-		66936FF82C64A629005B4D07 /* ChatlistVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF72C64A629005B4D07 /* ChatlistVM.swift */; };
 		66936FFA2C64A65B005B4D07 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FF92C64A65B005B4D07 /* ChatView.swift */; };
 		66936FFD2C64AAB5005B4D07 /* ChatVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FFC2C64AAB5005B4D07 /* ChatVM.swift */; };
 		66936FFF2C64AB3F005B4D07 /* TextMsgItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66936FFE2C64AB3F005B4D07 /* TextMsgItem.swift */; };
@@ -92,6 +95,10 @@
 		6601DA512C88E4A700EBADDA /* OpenAiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiResponse.swift; sourceTree = "<group>"; };
 		6601DA532C88E6CB00EBADDA /* OpenAiMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiMessage.swift; sourceTree = "<group>"; };
 		6601DA552C88EC5E00EBADDA /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		6639942F2C9333E200570E56 /* TherapistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistList.swift; sourceTree = "<group>"; };
+		663994322C93378600570E56 /* TherapistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TherapistsView.swift; sourceTree = "<group>"; };
+		663994342C9345DC00570E56 /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		663994362C93460000570E56 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		6677EA342C68661A00210D6A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		6677EA362C68662B00210D6A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		6677EA382C68664200210D6A /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
@@ -114,7 +121,6 @@
 		66936FED2C635042005B4D07 /* PurchaseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseItemView.swift; sourceTree = "<group>"; };
 		66936FF02C648E9B005B4D07 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		66936FF52C64921D005B4D07 /* ChatlistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatlistItemView.swift; sourceTree = "<group>"; };
-		66936FF72C64A629005B4D07 /* ChatlistVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatlistVM.swift; sourceTree = "<group>"; };
 		66936FF92C64A65B005B4D07 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		66936FFC2C64AAB5005B4D07 /* ChatVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVM.swift; sourceTree = "<group>"; };
 		66936FFE2C64AB3F005B4D07 /* TextMsgItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMsgItem.swift; sourceTree = "<group>"; };
@@ -196,13 +202,24 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		663994312C93376700570E56 /* Therapist */ = {
+			isa = PBXGroup;
+			children = (
+				663994322C93378600570E56 /* TherapistsView.swift */,
+				6639942F2C9333E200570E56 /* TherapistList.swift */,
+			);
+			path = Therapist;
+			sourceTree = "<group>";
+		};
 		66936FC62C60DE47005B4D07 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				663994342C9345DC00570E56 /* SubscriptionService.swift */,
 				66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */,
 				6601DA4E2C88DACB00EBADDA /* Main */,
 				66936FDD2C63435F005B4D07 /* Onboarding */,
 				66936FE52C6346E2005B4D07 /* Login */,
+				663994312C93376700570E56 /* Therapist */,
 				66936FF42C64920C005B4D07 /* Chatlist */,
 				6601DA472C88DA6B00EBADDA /* FavoriteList */,
 				66936FFB2C64A65E005B4D07 /* Chat */,
@@ -254,6 +271,7 @@
 				66936FCF2C633915005B4D07 /* Collection.swift */,
 				66BF7C782C6E8B910048D8B6 /* Encodable.swift */,
 				6601DA552C88EC5E00EBADDA /* Resolver.swift */,
+				663994362C93460000570E56 /* View.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -300,7 +318,6 @@
 		66936FF42C64920C005B4D07 /* Chatlist */ = {
 			isa = PBXGroup;
 			children = (
-				66936FF72C64A629005B4D07 /* ChatlistVM.swift */,
 				66EE1FE92C5E20A20022E10C /* ChatlistView.swift */,
 				66936FF52C64921D005B4D07 /* ChatlistItemView.swift */,
 			);
@@ -542,14 +559,15 @@
 				66936FCE2C6275B2005B4D07 /* Font.swift in Sources */,
 				6677EA3E2C68697F00210D6A /* ChatRepo.swift in Sources */,
 				66936FFF2C64AB3F005B4D07 /* TextMsgItem.swift in Sources */,
+				663994332C93378600570E56 /* TherapistsView.swift in Sources */,
 				6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */,
 				66936FDF2C634370005B4D07 /* OnboardingItemView.swift in Sources */,
 				6601DA4D2C88DAC700EBADDA /* MainVM.swift in Sources */,
 				66BF7C732C6DF4410048D8B6 /* Message.swift in Sources */,
 				66936FF62C64921D005B4D07 /* ChatlistItemView.swift in Sources */,
 				66936FD02C633915005B4D07 /* Collection.swift in Sources */,
+				663994352C9345DC00570E56 /* SubscriptionService.swift in Sources */,
 				6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */,
-				66936FF82C64A629005B4D07 /* ChatlistVM.swift in Sources */,
 				6601DA492C88DA7D00EBADDA /* FavoriteListView.swift in Sources */,
 				6677EA432C686A3400210D6A /* AuthDelegate.swift in Sources */,
 				66936FEE2C635042005B4D07 /* PurchaseItemView.swift in Sources */,
@@ -560,11 +578,13 @@
 				66936FFA2C64A65B005B4D07 /* ChatView.swift in Sources */,
 				66EE1FEA2C5E20A20022E10C /* ChatlistView.swift in Sources */,
 				66936FDC2C633C43005B4D07 /* OnboardingView.swift in Sources */,
+				663994372C93460000570E56 /* View.swift in Sources */,
 				66936FFD2C64AAB5005B4D07 /* ChatVM.swift in Sources */,
 				66936FE92C6346FA005B4D07 /* LoginVM.swift in Sources */,
 				66EE1FE82C5E20A20022E10C /* AITherapistApp.swift in Sources */,
 				66BF7C712C6DF4390048D8B6 /* User.swift in Sources */,
 				66BF7C752C6E2AF80048D8B6 /* Therapist.swift in Sources */,
+				663994302C9333E200570E56 /* TherapistList.swift in Sources */,
 				6601DA542C88E6CB00EBADDA /* OpenAiMessage.swift in Sources */,
 				66936FF12C648E9B005B4D07 /* Defaults.swift in Sources */,
 				6601DA432C88DA2800EBADDA /* MainView.swift in Sources */,
@@ -761,7 +781,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.manimau.aitherapist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -801,7 +821,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.manimau.AITherapist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.manimau.aitherapist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

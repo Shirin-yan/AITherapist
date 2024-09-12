@@ -74,6 +74,11 @@ class FirestoreManager {
         return Defaults.favoritedTherapists.compactMap({getTherapist(id: $0)})
     }
     
+    func getThreads() -> [Therapist] {
+        let ids = Set(messages.map({$0.threadId}))
+        return therapists.filter { ids.contains($0.id) }
+    }
+    
     func getMessages(){
         let savedMessages = readMessagesFromFile()
         self.messages = savedMessages.map { Message($0) }
