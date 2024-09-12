@@ -26,7 +26,7 @@ struct ChatlistItemView: View {
                         .imageScale(.large)
                 }.foregroundColor(.textColor)
                     .frame(width: 70, height: 70, alignment: .center)
-                    .background(Color.accentColor)
+                    .background(Color.primaryColor)
                     .cornerRadius(40)
                 
                 VStack {
@@ -38,6 +38,7 @@ struct ChatlistItemView: View {
                         
                         Button {
                             if Defaults.favoritedTherapists.contains(data.id) {
+                                
                                 Defaults.favoritedTherapists.removeAll(where: {$0 == data.id})
                                 isFavorited = false
                             } else {
@@ -73,7 +74,7 @@ struct ChatlistItemView: View {
                         .font(.inter(12, fontWeight: .regular))
                         .padding(.horizontal, 20)
                         .padding(.vertical, 6)
-                        .background(Color.accentColor)
+                        .background(Color.primaryColor)
                         .cornerRadius(20)
                     
                 }

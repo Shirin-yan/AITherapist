@@ -102,7 +102,7 @@ struct PurchaseView: View {
                 }.padding(.horizontal, 20)
             }
             
-        }.background(Color.accentColor.ignoresSafeArea())
+        }.background(Color.primaryColor.ignoresSafeArea())
     }
 }
 

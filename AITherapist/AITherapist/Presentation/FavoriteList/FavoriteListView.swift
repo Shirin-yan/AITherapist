@@ -18,16 +18,29 @@ struct FavoriteListView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 20)
-
-            ScrollView {
-                LazyVStack {
-                    ForEach(data) { data in
-                        ChatlistItemView(data: data, isFavorited: true)
+            if !data.isEmpty {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(data) { data in
+                            ChatlistItemView(data: data, isFavorited: true)
+                        }
                     }
                 }
+            } else {
+                VStack(spacing: 16) {
+                    Image(systemName: "tray.full")
+                        .resizable()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.textColor)
+
+                    Text("No favorited therpaists")
+                        .foregroundColor(.textColor)
+                        .font(.inter(20, fontWeight: .medium))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
+            .background(Color.primaryColor.opacity(0.5).ignoresSafeArea())
             .onAppear {
                 data = FirestoreManager.shared.getFavTherapists()
             }

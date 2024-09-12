@@ -10,8 +10,6 @@ import SwiftUI
 struct ChatlistView: View {
     @StateObject var vm = ChatlistVM()
 
-    let m = FirestoreManager()
-
     var body: some View {
         VStack(spacing: 20) {
             Text(LocalizedStringKey("find_your_therapist"))
@@ -29,7 +27,12 @@ struct ChatlistView: View {
                 }
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.accentColor.opacity(0.5).ignoresSafeArea())
+            .onAppear(perform: {
+                FirestoreManager.shared.getTherapists { list in
+                    vm.data = list
+                }
+            })
+            .background(Color.primaryColor.opacity(0.5).ignoresSafeArea())
             .fullScreenCover(isPresented: $vm.showPurchase, content: {
                 PurchaseView(isPresented: $vm.showPurchase)
             })

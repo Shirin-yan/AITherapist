@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    static let primaryColor = Color("PrimaryColor", bundle: .main)
     static let cardBgColor = Color("CardBgColor", bundle: .main)
     static let textColor = Color("TextColor", bundle: .main)
     static let blueColor = Color("BlueColor", bundle: .main)

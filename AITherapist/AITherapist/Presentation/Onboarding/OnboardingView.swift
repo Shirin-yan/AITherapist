@@ -45,7 +45,7 @@ struct OnboardingView: View {
                     .font(.inter(20, fontWeight: .regular))
                     .padding(.horizontal, 20)
                     .padding(.vertical, 10)
-                    .background(Color.accentColor)
+                    .background(Color.primaryColor)
                     .cornerRadius(10)
             }
             

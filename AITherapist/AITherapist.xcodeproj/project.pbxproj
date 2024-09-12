@@ -20,6 +20,8 @@
 		6601DA522C88E4A700EBADDA /* OpenAiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA512C88E4A700EBADDA /* OpenAiResponse.swift */; };
 		6601DA542C88E6CB00EBADDA /* OpenAiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA532C88E6CB00EBADDA /* OpenAiMessage.swift */; };
 		6601DA562C88EC5E00EBADDA /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601DA552C88EC5E00EBADDA /* Resolver.swift */; };
+		6639942C2C93092800570E56 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 6639942B2C93092800570E56 /* Adapty */; };
+		6639942E2C93092800570E56 /* AdaptyUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6639942D2C93092800570E56 /* AdaptyUI */; };
 		6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA342C68661A00210D6A /* NetworkClient.swift */; };
 		6677EA372C68662B00210D6A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA362C68662B00210D6A /* ApiEndpoint.swift */; };
 		6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA382C68664200210D6A /* CONSTANTS.swift */; };
@@ -140,7 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6639942E2C93092800570E56 /* AdaptyUI in Frameworks */,
 				6601DA3F2C88C0B400EBADDA /* FirebaseMessaging in Frameworks */,
+				6639942C2C93092800570E56 /* Adapty in Frameworks */,
 				6677EA412C68699B00210D6A /* Resolver in Frameworks */,
 				6677EA3C2C6868C200210D6A /* Alamofire in Frameworks */,
 				6601DA3B2C88C0B400EBADDA /* FirebaseDatabase in Frameworks */,
@@ -401,6 +405,8 @@
 				6601DA3C2C88C0B400EBADDA /* FirebaseFirestore */,
 				6601DA3E2C88C0B400EBADDA /* FirebaseMessaging */,
 				6601DA402C88C0B400EBADDA /* FirebaseStorage */,
+				6639942B2C93092800570E56 /* Adapty */,
+				6639942D2C93092800570E56 /* AdaptyUI */,
 			);
 			productName = AITherapist;
 			productReference = 66EE1FE42C5E20A20022E10C /* AITherapist.app */;
@@ -479,6 +485,7 @@
 				6677EA3F2C68699B00210D6A /* XCRemoteSwiftPackageReference "Resolver" */,
 				6677EA442C68751500210D6A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				6601DA392C88C0B400EBADDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6639942A2C93092800570E56 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 			);
 			productRefGroup = 66EE1FE52C5E20A20022E10C /* Products */;
 			projectDirPath = "";
@@ -945,6 +952,14 @@
 				minimumVersion = 11.1.0;
 			};
 		};
+		6639942A2C93092800570E56 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.3;
+			};
+		};
 		6677EA3A2C6868C200210D6A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -991,6 +1006,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6601DA392C88C0B400EBADDA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		6639942B2C93092800570E56 /* Adapty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6639942A2C93092800570E56 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = Adapty;
+		};
+		6639942D2C93092800570E56 /* AdaptyUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6639942A2C93092800570E56 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = AdaptyUI;
 		};
 		6677EA3B2C6868C200210D6A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

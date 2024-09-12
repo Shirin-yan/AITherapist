@@ -34,7 +34,6 @@ class FirestoreManager {
                                                 content: dict["content"] ?? INITIAL_MESSAGE.content)
             }
         }
-
     }
 
     func getUser(id: String) {
@@ -43,7 +42,7 @@ class FirestoreManager {
         userRef.child(id).observeSingleEvent(of: .value) { snapshot in
             if let dict = snapshot.value as? [String: Any]? {
                 self.user = User(dict!)
-                self.getMessages(id: id)
+                self.getMessages()
             }
         }
     }
@@ -75,11 +74,9 @@ class FirestoreManager {
         return Defaults.favoritedTherapists.compactMap({getTherapist(id: $0)})
     }
     
-    func getMessages(id: String = Defaults.token){
-        userRef.child(id).child("messages").observe(.value, with: { snapshot in
-            var dict = (snapshot.value as? [[String: Any]?])?.compactMap({$0}) ?? []
-            self.messages = dict.map({ Message($0) })
-        })
+    func getMessages(){
+        let savedMessages = readMessagesFromFile()
+        self.messages = savedMessages.map { Message($0) }
     }
     
     func getThreadMessage(threadId: Int) -> [Message]{
@@ -103,13 +100,9 @@ class FirestoreManager {
     }
     
     func saveMessage(msg: Message){
-        let id = (user?.id ?? Defaults.token).replacingOccurrences(of: ".", with: "_")
         messages.append(msg)
-        var dictionary: [String: Any] = [:]
-        for (index, value) in messages.enumerated() {
-            dictionary["\(index)"] = value.getDictionary
-        }
-        userRef.child(id).child("messages").setValue(dictionary)
+        let messagesArray = messages.compactMap { $0.getDictionary }
+        writeMessagesToFile(messages: messagesArray)
     }
     
     private func getTag(id: Int) -> Tag? {
@@ -118,5 +111,30 @@ class FirestoreManager {
     
     private func getTherapist(id: Int) -> Therapist? {
         return therapists.first(where: {$0.id == id })
+    }
+    
+    private func getMessagesFileURL() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0].appendingPathComponent("messages.txt")
+    }
+    
+    private func readMessagesFromFile() -> [[String: Any]] {
+        let fileURL = getMessagesFileURL()
+
+        if let data = try? Data(contentsOf: fileURL),
+           let json = try? JSONSerialization.jsonObject(with: data, options: []),
+           let messagesArray = json as? [[String: Any]] {
+            return messagesArray
+        } else {
+            return []
+        }
+    }
+
+    private func writeMessagesToFile(messages: [[String: Any]]) {
+        let fileURL = getMessagesFileURL()
+
+        if let data = try? JSONSerialization.data(withJSONObject: messages, options: .prettyPrinted) {
+            try? data.write(to: fileURL)
+        }
     }
 }

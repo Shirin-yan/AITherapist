@@ -31,7 +31,7 @@ struct MainView: View {
             } else {
                 TabView(selection: $selectedTab) {
                     ChatlistView()
-                        .tabItem{ Label("Home", systemImage: "house") }
+                        .tabItem{ Label("Therapists", systemImage: "list.dash") }
                         .tag(0)
                     
                     FavoriteListView()
@@ -39,8 +39,12 @@ struct MainView: View {
                         .tag(1)
                     
                     SettingsView()
-                        .tabItem{ Label("Settings", systemImage: "gear") }
+                        .tabItem{ Label("Chat", systemImage: "text.bubble.fill") }
                         .tag(2)
+                    
+                    SettingsView()
+                        .tabItem{ Label("Settings", systemImage: "gear") }
+                        .tag(3)
                 }
             }
         }
