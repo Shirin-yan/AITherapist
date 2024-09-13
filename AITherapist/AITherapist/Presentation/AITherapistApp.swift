@@ -37,8 +37,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
-        FirestoreManager.shared.getInitialMessage()
-        
+        FirestoreManager.shared.getSubscriptions()
         let configurationBuilder = Adapty.Configuration
             .Builder(withAPIKey: ADAPTY_ID)
             .with(observerMode: false)

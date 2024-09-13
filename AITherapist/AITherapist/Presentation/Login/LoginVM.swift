@@ -30,7 +30,8 @@ class LoginVM: ObservableObject {
             let id = user.userID ?? UUID().uuidString
             let name = user.profile?.name ?? ""
             let email = user.profile?.email ?? "mock_email"
-            Defaults.token = FirestoreManager.shared.saveUser(User(id: id, name: name, email: email, messages: []))
+            Defaults.token = FirestoreManager.shared.saveUser(User(id: id, name: name, email: email
+                                                                  ))
         }
     }
     

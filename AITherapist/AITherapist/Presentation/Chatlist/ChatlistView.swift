@@ -19,7 +19,21 @@ struct ChatlistView: View {
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 20)
             
-            TherapistList(data: data)
+            if !data.isEmpty {
+                TherapistList(data: data)
+            } else {
+                VStack(spacing: 16) {
+                    Image(systemName: "tray.full")
+                        .resizable()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.textColor)
+
+                    Text("No chats")
+                        .foregroundColor(.textColor)
+                        .font(.inter(20, fontWeight: .medium))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .onAppear {
                 data = FirestoreManager.shared.getThreads()

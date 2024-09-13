@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.manimau.AITherapist</string>
+	<string>com.sg.manimau.aitherapist</string>
 	<key>PROJECT_ID</key>
 	<string>aitherapist-3e11d</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:37587929346:ios:1da478bd7fdf17e0315a1b</string>
+	<string>1:37587929346:ios:3c85bafcd6c69e78315a1b</string>
 	<key>DATABASE_URL</key>
 	<string>https://aitherapist-3e11d-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>

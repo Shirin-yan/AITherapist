@@ -45,6 +45,21 @@ struct MainView: View {
                     SettingsView()
                         .tabItem{ Label("Settings", systemImage: "gear") }
                         .tag(3)
+                }.onAppear {
+                    subscriptionService.toShowAfterFinish = true
+                    subscriptionService.getPaywall()
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now()) { [self] in
+                        let currentSub = FirestoreManager.shared.user?.subscription
+                        let msgCount = FirestoreManager.shared.subscriptions.first(where: { $0.id == currentSub?.id })?.messageCount ?? 10
+                        let subEndDate = currentSub?.subscriptionEnds ?? ""
+                        
+                        let renewals = subscriptionService.calculateRenewalCounts(from: subEndDate)
+                        let expire = "2024-09-13T18:08:06Z"//subscriptionService.getExpireDate()?.ISO8601Format() ?? subEndDate
+                        FirestoreManager.shared.user?.subscription?.subscriptionEnds = expire
+                        FirestoreManager.shared.user?.leftMessage += renewals*msgCount
+                        FirestoreManager.shared.updateUser()
+                    }
                 }
             }
         }.safePaywall(
@@ -56,17 +71,22 @@ struct MainView: View {
                 case .close:
                     subscriptionService.showPaywall = false
                 default:
-                    // Handle other actions
                     break
                 }
             },
             didFinishPurchase: { product, profile in
                 subscriptionService.showPaywall = false
+                let msgCount = FirestoreManager.shared.subscriptions.first(where: { $0.id == product.vendorProductId })?.messageCount ?? 10
+                let expireDate = profile.profile.accessLevels.first(where: {$0.value.isActive})?.value.expiresAt?.ISO8601Format() ?? ""
+                FirestoreManager.shared.user?.subscription = UserSubscription(id: product.vendorProductId, messageCount: msgCount, subscriptionEnds: expireDate)
+                FirestoreManager.shared.user?.leftMessage += msgCount
+                FirestoreManager.shared.updateUser()
             },
             didFailPurchase: { product, error in
                 // Handle the error
             },
             didFinishRestore: { profile in
+                
                 // Check access level and dismiss
             },
             didFailRestore: { error in
@@ -76,10 +96,7 @@ struct MainView: View {
                 subscriptionService.showPaywall = false
             }
         )
-        .onAppear {
-            subscriptionService.toShowAfterFinish = true
-            subscriptionService.getPaywall()
-        }
+        
     }
     
 }

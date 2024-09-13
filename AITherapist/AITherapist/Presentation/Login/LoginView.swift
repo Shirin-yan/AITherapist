@@ -54,7 +54,6 @@ struct LoginView: View {
             }
                 Button {
                     vm.signInGoogle()
-//                    Defaults.token = UUID().uuidString
                 } label: {
                     HStack {
                         Image("google")

@@ -20,7 +20,7 @@ class AppleSignInDelegate: NSObject, ASAuthorizationControllerDelegate {
             let id = appleIdCredential.user
             let name = [(appleIdCredential.fullName?.givenName ?? "User"), (appleIdCredential.fullName?.familyName ?? "")].joined(separator: " ")
             let email = appleIdCredential.email ?? "mock_email"
-            let user = User(id: id, name: name, email: email, messages: [])
+            let user = User(id: id, name: name, email: email)
             Defaults.token = FirestoreManager.shared.saveUser(user)
         }
     }

@@ -11,27 +11,36 @@ struct User: Codable {
     var id: String
     var name: String
     var email: String
-    var messages: [Message]
+    var leftMessage: Int
+    var subscription: UserSubscription?
+    var free: UserSubscription?
     
-    init(id: String, name: String, email: String, messages: [Message]) {
+    init(id: String, name: String, email: String) {
         self.id = id
         self.name = name
         self.email = email
-        self.messages = messages
+        self.subscription = nil
+        self.free = nil
+        self.leftMessage = -1
     }
     
     init(_ data: [String: Any]){
         self.id = data["id"] as? String ?? ""
         self.name = data["name"] as? String ?? ""
         self.email = data["email"] as? String ?? ""
-        self.messages = [] //data["messages"] as? String ?? ""
+        self.subscription = UserSubscription(data["subscription"] as? [String: Any] ?? [:])
+        self.free = UserSubscription(data["free"] as? [String: Any] ?? [:])
+        self.leftMessage = data["left_message"] as? Int ?? -1
     }
 
-    func dictToSave() -> [String: String] {
+    func dictToSave() -> [String: Any] {
         return [
             "id": id,
             "name": name,
-            "email": email
+            "email": email,
+            "subscription": subscription?.getDictionary ?? [:],
+            "free": free?.getDictionary ?? [:],
+            "left_message": leftMessage
         ]
     }
 }

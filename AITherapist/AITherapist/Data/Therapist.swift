@@ -11,6 +11,7 @@ struct Therapist: Identifiable {
     var id: Int
     var name: String
     var about: String
+    var promt: String = ""
     var avatar: String = ""
     var tags: [Tag]
     
@@ -19,6 +20,7 @@ struct Therapist: Identifiable {
         name = data["name"] as? String ?? ""
         about = data["about"] as? String ?? ""
         avatar = data["avatar"] as? String ?? ""
+        promt = data["promt"] as? String ?? ""
         self.tags = tags
     }
 }

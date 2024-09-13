@@ -19,13 +19,7 @@ struct FavoriteListView: View {
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 20)
             if !data.isEmpty {
-                ScrollView {
-                    LazyVStack(spacing: 14) {
-                        ForEach(data) { data in
-                            ChatlistItemView(data: data)
-                        }
-                    }
-                }
+                TherapistList(data: data)
             } else {
                 VStack(spacing: 16) {
                     Image(systemName: "tray.full")

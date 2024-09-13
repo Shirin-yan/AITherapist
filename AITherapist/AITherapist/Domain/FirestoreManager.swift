@@ -11,39 +11,52 @@ import Firebase
 class FirestoreManager {
     
     static let shared = FirestoreManager()
+    
     public var user: User?
     public var tags: [Tag] = []
     public var therapists: [Therapist] = []
     public var messages: [Message] = []
+    public var subscriptions: [Subscription] = []
     
     private let userRef = Database.database().reference().child("users")
     private let therapistRef = Database.database().reference().child("therapists")
     private let tagRef = Database.database().reference().child("tags")
-
+    
     func getData(){
-        getInitialMessage()
         getUser(id: Defaults.token)
         getTherapists { _ in }
         getTags { _ in }
     }
 
-    func getInitialMessage(){
-        Database.database().reference().child("initial_message").observeSingleEvent(of: .value) { snapshot in
-            if let dict = snapshot.value as? [String: String] {
-                INITIAL_MESSAGE = OpenAiMessage(role: dict["role"] ?? INITIAL_MESSAGE.role,
-                                                content: dict["content"] ?? INITIAL_MESSAGE.content)
-            }
-        }
-    }
-
     func getUser(id: String) {
         let id = id.replacingOccurrences(of: ".", with: "_")
-        print(id)
         userRef.child(id).observeSingleEvent(of: .value) { snapshot in
             if let dict = snapshot.value as? [String: Any]? {
                 self.user = User(dict!)
                 self.getMessages()
+                self.setupFreeLeftMessages()
             }
+        }
+    }
+    
+    func updateUser(){
+        let id = user?.id.replacingOccurrences(of: ".", with: "_") ?? ""
+        userRef.child(id).updateChildValues(user?.dictToSave() ?? [:])
+    }
+
+    func setupFreeLeftMessages(){
+        let id = user?.id.replacingOccurrences(of: ".", with: "_") ?? ""
+        guard let freeSubs = subscriptions.first(where: {$0.id == "free"}), var user = user else { return }
+        let fullTwelveHoursCount = self.user?.free?.subscriptionEnds.fullTwelveHourIntervals() ?? 0
+        user.leftMessage +=  fullTwelveHoursCount * freeSubs.messageCount
+        user.free?.subscriptionEnds = (self.user?.free?.subscriptionEnds ?? "").addTwelveHours(fullTwelveHoursCount+1)
+        userRef.child(id).updateChildValues(user.dictToSave())
+    }
+        
+    func getSubscriptions(){
+        Database.database().reference().child("subscriptions").observeSingleEvent(of: .value) { snapshot in
+            let dict = snapshot.value as? [[String: Any]?]
+            self.subscriptions = dict?.map({Subscription($0 ?? [:])}) ?? []
         }
     }
     
@@ -90,6 +103,9 @@ class FirestoreManager {
     
     func saveUser(_ user: User) -> String {
         let id = user.id.replacingOccurrences(of: ".", with: "_")
+        let freeSubs = subscriptions.first(where: {$0.id == "free"})
+        var user = user
+        user.free = UserSubscription(id: "free", messageCount: freeSubs?.messageCount ?? 10, subscriptionEnds: Date().ISO8601Format())
         
         userRef.child(id).observeSingleEvent(of: .value) { snapshot in
             if let dict = snapshot.value as? [String: Any]? {

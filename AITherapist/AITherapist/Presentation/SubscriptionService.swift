@@ -10,12 +10,17 @@ import Adapty
 import AdaptyUI
 import SwiftUI
 
+enum SubscriptionPeriod: String {
+    case weekly, monthly, yearly
+}
+
 class SubscriptionService: ObservableObject {
     var paywall: AdaptyPaywall? = nil
     var paywallError: Error? = nil
     var configuration: AdaptyUI.LocalizedViewConfiguration? = nil
     var toShowAfterFinish = false
-    
+    var isUserPremium: Bool = false
+
     @Published var showPaywall = false
     
     var profile: AdaptyProfile? = nil {
@@ -25,7 +30,6 @@ class SubscriptionService: ObservableObject {
         }
     }
 
-    var isUserPremium: Bool = false
     
     func getPaywall() {
         Adapty.getPaywall(placementId: "onboarding", locale: "en") { result in
@@ -100,5 +104,50 @@ class SubscriptionService: ObservableObject {
         Task {
             try? await Adapty.restorePurchases()
         }
+    }
+    
+    func getActiveProduct() -> AdaptyProfile.AccessLevel? {
+        return profile?.accessLevels.first(where: {$0.value.isActive})?.value
+    }
+    
+    func getExpireDate() -> Date? {
+        guard let active = getActiveProduct() else { return nil }
+        return active.expiresAt
+    }
+    
+    func getActivatedDate() -> Date? {
+        guard let active = getActiveProduct() else { return nil }
+        return active.activatedAt
+    }
+    
+    func getSubscriptionPeriod() -> SubscriptionPeriod? {
+        guard let active = getActiveProduct() else { return nil}
+        return SubscriptionPeriod(rawValue: active.vendorProductId.components(separatedBy: ".").last ?? "")
+    }
+    
+    func calculateRenewalCounts(from: String) -> Int {
+        
+        guard isUserPremium,
+              !from.isEmpty,
+              let subscription = getSubscriptionPeriod(),
+              let lastActivatedDate = getActivatedDate() else { return 0 }
+                
+        let lastSubsEndTime = from.getDate()
+        if lastActivatedDate == lastSubsEndTime { return 0 }
+        
+        let calendar = Calendar.current
+        var renewalCount = 0
+        switch subscription {
+        case .weekly:
+            renewalCount = calendar.dateComponents([.weekOfYear], from: lastSubsEndTime, to: lastActivatedDate).weekOfYear ?? 0
+        case .monthly:
+            renewalCount = calendar.dateComponents([.month], from: lastSubsEndTime, to: lastActivatedDate).month ?? 0
+        case .yearly:
+            renewalCount = calendar.dateComponents([.year], from: lastSubsEndTime, to: lastActivatedDate).year ?? 0
+        default:
+            return 0
+        }
+        
+        return renewalCount < 0 ? 0 : renewalCount
     }
 }
