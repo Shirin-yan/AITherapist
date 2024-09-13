@@ -81,7 +81,7 @@ class SubscriptionService: ObservableObject {
     func setProfile(_ profile: AdaptyProfile) {
         self.profile = profile
         DispatchQueue.main.async { [self] in
-            if toShowAfterFinish {
+            if toShowAfterFinish && !isPremium() {
                 showPaywallView()
             }
         }

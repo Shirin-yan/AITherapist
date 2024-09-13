@@ -21,7 +21,7 @@ struct User: Codable {
         self.email = email
         self.subscription = nil
         self.free = nil
-        self.leftMessage = -1
+        self.leftMessage = 10
     }
     
     init(_ data: [String: Any]){
@@ -30,7 +30,7 @@ struct User: Codable {
         self.email = data["email"] as? String ?? ""
         self.subscription = UserSubscription(data["subscription"] as? [String: Any] ?? [:])
         self.free = UserSubscription(data["free"] as? [String: Any] ?? [:])
-        self.leftMessage = data["left_message"] as? Int ?? -1
+        self.leftMessage = data["left_message"] as? Int ?? 10
     }
 
     func dictToSave() -> [String: Any] {

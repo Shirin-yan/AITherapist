@@ -42,7 +42,7 @@ struct MainView: View {
                         .tabItem{ Label("Chat", systemImage: "text.bubble.fill") }
                         .tag(2)
                     
-                    SettingsView()
+                    SettingsView(subscriptionService: subscriptionService)
                         .tabItem{ Label("Settings", systemImage: "gear") }
                         .tag(3)
                 }.onAppear {
@@ -55,7 +55,7 @@ struct MainView: View {
                         let subEndDate = currentSub?.subscriptionEnds ?? ""
                         
                         let renewals = subscriptionService.calculateRenewalCounts(from: subEndDate)
-                        let expire = "2024-09-13T18:08:06Z"//subscriptionService.getExpireDate()?.ISO8601Format() ?? subEndDate
+                        let expire = subscriptionService.getExpireDate()?.ISO8601Format() ?? subEndDate
                         FirestoreManager.shared.user?.subscription?.subscriptionEnds = expire
                         FirestoreManager.shared.user?.leftMessage += renewals*msgCount
                         FirestoreManager.shared.updateUser()
@@ -86,7 +86,6 @@ struct MainView: View {
                 // Handle the error
             },
             didFinishRestore: { profile in
-                
                 // Check access level and dismiss
             },
             didFailRestore: { error in

@@ -18,7 +18,7 @@ struct ChatlistItemView: View {
     
     var body: some View {
         NavigationLink {
-            ChatView(vm: ChatVM(threadId: data.id))
+            ChatView(vm: ChatVM(threadId: data.id, prompt: data.promt))
         } label: {
             VStack {
                 HStack(spacing: 10) {

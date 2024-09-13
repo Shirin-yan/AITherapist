@@ -41,8 +41,7 @@ enum Endpoints: Endpoint {
     var body: OpenAiBody? {
         switch self {
         case .openAiCompletion(let array):
-            var m = [INITIAL_MESSAGE]+array
-            return OpenAiBody(messages: m)
+            return OpenAiBody(messages: array)
         }
     }
 }

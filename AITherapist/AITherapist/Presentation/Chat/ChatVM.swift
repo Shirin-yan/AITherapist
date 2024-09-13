@@ -13,13 +13,15 @@ class ChatVM: ObservableObject {
     @Injected var repo: ChatRepo
 
     var threadId: Int
+    var prompt: String
     var openAiBodyMessage: [OpenAiMessage] = []
     
     @Published var data: [Message] = []
     @Published var inProgress = false
 
-    init(threadId: Int) {
+    init(threadId: Int, prompt: String) {
         self.threadId = threadId
+        self.prompt = prompt
         data = FirestoreManager.shared.getThreadMessage(threadId: threadId)
         openAiBodyMessage = data.map({OpenAiMessage(role: $0.isSenderMe ? "assistant" : "user", content: $0.text) })
     }
@@ -33,7 +35,10 @@ class ChatVM: ObservableObject {
     
     func getResponse(){
         inProgress = true
-        repo.getAnswer(messages: openAiBodyMessage.suffix(9)) { [weak self] res in
+        var body = Array(openAiBodyMessage.suffix(9))
+        body.insert(OpenAiMessage(role: "system", content: prompt), at: 0)
+        
+        repo.getAnswer(messages: body) { [weak self] res in
             self?.inProgress = false
             switch res {
             case .success(let success):

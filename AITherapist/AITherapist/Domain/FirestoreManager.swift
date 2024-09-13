@@ -44,6 +44,10 @@ class FirestoreManager {
         userRef.child(id).updateChildValues(user?.dictToSave() ?? [:])
     }
 
+    func deleteUser(){
+        let id = user?.id.replacingOccurrences(of: ".", with: "_") ?? ""
+        userRef.child(id).setValue(nil)
+    }
     func setupFreeLeftMessages(){
         let id = user?.id.replacingOccurrences(of: ".", with: "_") ?? ""
         guard let freeSubs = subscriptions.first(where: {$0.id == "free"}), var user = user else { return }

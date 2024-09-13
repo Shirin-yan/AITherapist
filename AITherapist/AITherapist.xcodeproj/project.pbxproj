@@ -28,6 +28,7 @@
 		6639943B2C934B6300570E56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6639943A2C934B6200570E56 /* GoogleService-Info.plist */; };
 		6639943D2C93511A00570E56 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639943C2C93511A00570E56 /* Subscription.swift */; };
 		6639943F2C9354FD00570E56 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639943E2C9354FD00570E56 /* Date.swift */; };
+		663994412C942A3300570E56 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663994402C942A3300570E56 /* SafariView.swift */; };
 		6677EA352C68661A00210D6A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA342C68661A00210D6A /* NetworkClient.swift */; };
 		6677EA372C68662B00210D6A /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA362C68662B00210D6A /* ApiEndpoint.swift */; };
 		6677EA392C68664200210D6A /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6677EA382C68664200210D6A /* CONSTANTS.swift */; };
@@ -103,6 +104,7 @@
 		6639943A2C934B6200570E56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6639943C2C93511A00570E56 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		6639943E2C9354FD00570E56 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		663994402C942A3300570E56 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		6677EA342C68661A00210D6A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		6677EA362C68662B00210D6A /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		6677EA382C68664200210D6A /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				6601DA452C88DA6100EBADDA /* SettingsView.swift */,
+				663994402C942A3300570E56 /* SafariView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -218,7 +221,6 @@
 		66936FC62C60DE47005B4D07 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				663994342C9345DC00570E56 /* SubscriptionService.swift */,
 				66EE1FE72C5E20A20022E10C /* AITherapistApp.swift */,
 				6601DA4E2C88DACB00EBADDA /* Main */,
 				66936FDD2C63435F005B4D07 /* Onboarding */,
@@ -238,6 +240,7 @@
 			children = (
 				6677EA3D2C68697F00210D6A /* ChatRepo.swift */,
 				66BF7C6E2C6DF2500048D8B6 /* FirestoreManager.swift */,
+				663994342C9345DC00570E56 /* SubscriptionService.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				66BF7C712C6DF4390048D8B6 /* User.swift in Sources */,
 				66BF7C752C6E2AF80048D8B6 /* Therapist.swift in Sources */,
 				663994302C9333E200570E56 /* TherapistList.swift in Sources */,
+				663994412C942A3300570E56 /* SafariView.swift in Sources */,
 				6601DA542C88E6CB00EBADDA /* OpenAiMessage.swift in Sources */,
 				6639943D2C93511A00570E56 /* Subscription.swift in Sources */,
 				66936FF12C648E9B005B4D07 /* Defaults.swift in Sources */,
