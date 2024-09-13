@@ -10,8 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     @ObservedObject var subscriptionService: SubscriptionService
     @State private var showSafari = false
-    @State private var safariURL: URL?
-
+    @State private var safariURL = URL(string: "https://")!
+    
     var body: some View {
         VStack {
             Text(LocalizedStringKey("Settings"))
@@ -74,7 +74,7 @@ struct SettingsView: View {
                 }
                 
                 Button {
-                    safariURL = URL(string: "https://")!
+                    safariURL = URL(string: "https://example.com")!
                     showSafari.toggle()
                 } label: {
                     Text("Privacy Policy")
@@ -109,9 +109,8 @@ struct SettingsView: View {
                 }
             }.listStyle(PlainListStyle())
                 .sheet(isPresented: $showSafari) {
-                    if let safariURL = safariURL {
-                        SafariView(url: safariURL)
-                    }
+                    SafariView(url: $safariURL)
+                        .ignoresSafeArea()
                 }
         }
     }

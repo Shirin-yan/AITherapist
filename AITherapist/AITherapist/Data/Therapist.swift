@@ -20,7 +20,7 @@ struct Therapist: Identifiable {
         name = data["name"] as? String ?? ""
         about = data["about"] as? String ?? ""
         avatar = data["avatar"] as? String ?? ""
-        promt = data["promt"] as? String ?? ""
+        promt = data["prompt"] as? String ?? ""
         self.tags = tags
     }
 }

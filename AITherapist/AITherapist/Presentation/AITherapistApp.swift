@@ -25,7 +25,7 @@ struct AITherapistApp: App {
                 token.isEmpty {
                 LoginView()
             } else {
-                NavigationView {
+                NavigationStack {
                     MainView()
                 }.navigationViewStyle(StackNavigationViewStyle())
             }

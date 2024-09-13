@@ -26,11 +26,13 @@ class ChatVM: ObservableObject {
         openAiBodyMessage = data.map({OpenAiMessage(role: $0.isSenderMe ? "assistant" : "user", content: $0.text) })
     }
     
-    func sendMsg(data: String){
+    func sendMsg(data: String) -> Bool {
+        if (FirestoreManager.shared.user?.leftMessage ?? 0) <= 0 { return false }
         let msgToInsert = Message(id: UUID().uuidString, threadId: threadId, isSenderMe: true, text: data, datetime: Date().ISO8601Format())
         self.saveMsgToFirebase(msg: msgToInsert)
         openAiBodyMessage.append(OpenAiMessage(role: "user", content: data))
         getResponse()
+        return true
     }
     
     func getResponse(){
@@ -52,6 +54,8 @@ class ChatVM: ObservableObject {
     
     func saveMsgToFirebase(msg: Message){
         self.data.insert(msg, at: 0)
+        FirestoreManager.shared.user?.leftMessage -= 1
+        FirestoreManager.shared.updateUser()
         FirestoreManager.shared.saveMessage(msg: msg)
     }
 }

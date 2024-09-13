@@ -19,6 +19,9 @@ struct MainView: View {
         appearance.selectionIndicatorTintColor = UIColor.blue
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
+
+        subscriptionService.toShowAfterFinish = true
+        subscriptionService.getPaywall()
     }
     
     var body: some View {
@@ -46,9 +49,6 @@ struct MainView: View {
                         .tabItem{ Label("Settings", systemImage: "gear") }
                         .tag(3)
                 }.onAppear {
-                    subscriptionService.toShowAfterFinish = true
-                    subscriptionService.getPaywall()
-                    
                     DispatchQueue.main.asyncAfter(deadline: .now()) { [self] in
                         let currentSub = FirestoreManager.shared.user?.subscription
                         let msgCount = FirestoreManager.shared.subscriptions.first(where: { $0.id == currentSub?.id })?.messageCount ?? 10

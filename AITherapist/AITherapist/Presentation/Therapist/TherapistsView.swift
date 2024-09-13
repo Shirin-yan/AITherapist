@@ -21,11 +21,12 @@ struct TherapistsView: View {
 
             TherapistList(data: data)
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white.ignoresSafeArea())
             .onAppear {
                 FirestoreManager.shared.getTherapists { list in
                     data = list
                 }
-            }.background(Color.white.ignoresSafeArea())
+            }        
     }
 }
 

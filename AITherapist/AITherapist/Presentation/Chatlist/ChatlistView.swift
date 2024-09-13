@@ -35,9 +35,10 @@ struct ChatlistView: View {
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white.ignoresSafeArea())
             .onAppear {
                 data = FirestoreManager.shared.getThreads()
-            }.background(Color.white.ignoresSafeArea())
+            }
     }
 }
 

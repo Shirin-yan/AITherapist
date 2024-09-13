@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject var vm: ChatVM
-    @State var message = ""
+    @State private var message = ""
+    @State private var showSafari = false
     
     var body: some View {
         VStack {
@@ -32,8 +33,12 @@ struct ChatView: View {
                     .frame(minHeight: 60)
                 
                 Button {
-                    vm.sendMsg(data: message)
-                    message = ""
+                    let canSend = vm.sendMsg(data: message)
+                    if canSend {
+                        message = ""
+                    } else {
+                        showSafari = true
+                    }
                 } label: {
                     Image("send")
                 }.frame(width: 40, height: 40)
@@ -44,15 +49,17 @@ struct ChatView: View {
                 .cornerRadius(12)
                 .padding(.horizontal, 20)
             
-            Text("This app does not give Medical advice. AI therapist are not real therapist. Read our \(Text("[Discliamer](https://www.)").underline())")
+            Text("This app does not give Medical advice. AI therapist are not real therapist. Read our \(Text("Discliamer").underline().foregroundColor(.blue))")
                 .font(.inter(12, fontWeight: .regular))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
                 .tint(.blue)
-                .environment(\.openURL, OpenURLAction { url in
-                    return .handled
+                .onTapGesture {
+                    showSafari.toggle()
+                }.sheet(isPresented: $showSafari, content: {
+                    SafariView(url: .constant(URL(string: "https://")!))
+                        .ignoresSafeArea()
                 })
-
         }
     }
 }
